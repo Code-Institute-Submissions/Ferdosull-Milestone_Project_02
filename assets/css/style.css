@@ -1,0 +1,531 @@
+/* -----------------------------------------------Text Fonts and associated styling */
+.text-uppercase { /* ----New-VWCC--- */
+    text-align: center;
+	font-family: 'Voltaire', sans-serif;
+}
+
+.general-sub { /* ----New-VWCC--- */
+	font-family: 'Voltaire', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+body { /* ----New-VWCC--- */
+    font-family: 'Voltaire', sans-serif;
+	letter-spacing: .03rem;
+	background: #f0f0f0;
+}
+
+.opaque { /* ----New-VWCC--- */
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.link-font { /* ----New-VWCC--- */
+    color: #fbfcff;
+}
+
+.link-font-1 { /* ----New-VWCC--- */
+	margin-top: 1.5rem;
+	margin-left: 0.2rem;
+}
+
+/* ------------------------------------------------------------------------Navbar */
+
+.nav-item { /* ----New-VWCC--- */
+	font-size: 1.5rem;
+}
+
+.navalert-container { /* ----New-VWCC--- */
+	font-family: 'Prompt', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 20;
+}
+
+.navbar { /* ----New-VWCC--- */
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 0.18rem;
+    margin-bottom: 0;
+	color: #fbfcff;
+    width: 100%;
+	height: 4rem;
+    background: #23395d;
+}
+
+.navbar-expand-md { /* ----New-VWCC--- */
+	color: #03ac13;
+}
+
+.navbar .navbar-toggler { /* ----New-VWCC--- */
+    border: 0;
+}
+.vw-logo { /* ----New-VWCC--- */
+	width: 3.7rem;
+}
+
+.navbar-brand { /* ----New-VWCC--- */
+	border-style: solid;
+	border-radius: 1.5rem;
+	border-width: 0.18rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+    font-weight: bold;
+	font-size: 1.5rem;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #03ac13 !important;
+}
+
+.navbar a:hover { /* ----New-VWCC Shamrock --- */
+	color: #03ac13 !important; }
+	
+.navbar .navbar-nav a { /* ----New-VWCC--- */
+    font-weight: bold;
+}
+
+.collapse { /* ----New-VWCC--- */
+    background-color:#23395d;
+}
+
+/* ------------------------------------------------------------------------Buttons*/
+
+.btn-info { /* ----New-VWCC--- */
+	width: 14rem;
+	height: 4rem;
+	margin: 0.3rem;
+	margin-top: 1rem;
+}
+
+.btn-top { /* ----New-VWCC--- */
+	margin-top: 3rem;
+	background-color: #f0f0f0;
+}
+
+.btn-bottom { /* ----New-VWCC--- */
+	margin-bottom: 3rem;
+	background-color: #f0f0f0;
+}
+
+/* -------------------------------------------------------------------Colours used*/
+
+/* --------Rufous Red = #A72608 -- (changed to #E60023 as it is easier to see) -- */
+/* -----Xiketic Brown = #18020C -- */
+/* ------Roman Silver = #828A95 -- */
+/* --------Mint Cream = #ECFFF8 -- */
+/* --Rich Black FOGRA = #01161E -- */
+/* ---------Off White = #FAFAFA -- */
+
+/* -----------------------------------------------------------------Image Styling */
+	
+.background_image { /* ----New-VWCC--- */
+	width: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+	background-color: #f0f0f0;
+}
+
+.container { /* ----New-VWCC--- */
+	background: #f0f0f0;
+}
+
+/* ----------------------------------------------------------------------Headings */
+
+.jumbotron-header { /* ----New-VWCC--- */
+    color: #fbfcff;
+	text-shadow:2px 0 0 #03ac13,0 2px 0 #03ac13,2px 0 0 #03ac13,0 2px 0 #03ac13;
+	font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+	font-size: 2.8rem;
+	letter-spacing: 3px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+	margin-right: 7.5%;
+	position: absolute;
+	top: 8px;
+	right: 10%;
+}
+
+/* ------------------------------------------------Header Text Transition Fade-In */
+
+.fade-in-2sec {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+/* -----------------------------------------------------------------/Overlays.css */
+
+.pic-overlay { /* ----New-VWCC--- */
+    position: absolute; 
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fafafa; 
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; 
+    transition: .5s ease;
+    opacity:0;
+    font-family: 'Voltaire', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+
+.icon-overlay { /* ----New-VWCC--- */
+    position: absolute; 
+    top: 0.6rem;
+    right: 0.6rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fafafa; 
+    width: auto;
+    transition: .5s ease;
+    opacity:0;
+    font-size: 25px;
+    padding: 4px 4px 7px 9px;
+    border-radius: 0.6rem;
+}
+
+
+/* --------------------------------------------------------------------Modals.css */
+
+.modal-body {
+	font-family: 'Prompt', sans-serif;
+}
+    
+.modal-header {
+	font-family: 'Prompt', sans-serif;
+}
+    
+.modal-newsletter {	
+	color: #999;
+	width: 625px;
+	font-size: 15px;
+	margin: 30px auto;
+}
+
+.modal-newsletter .modal-content {
+	padding: 30px;
+	border-radius: 5px;		
+	border: none;
+}
+
+.modal-newsletter .modal-header {
+	border-bottom: none;   
+    position: relative;
+	border-radius: 0;
+	background-color: #23395d;
+}
+
+.modal-newsletter h4 {
+	color: #fbfcff;
+	font-size: 26px;
+	letter-spacing: 1.5px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.modal-newsletter .close {
+	position: absolute;
+	top: -35px;
+	right: -23px;
+	text-shadow: none;
+	opacity: 0.6;
+	font-size: 2.5rem;
+}
+
+.modal-newsletter .close:hover {
+	opacity: 0.8;
+}
+
+.modal-newsletter .icon-box {
+	color: #7265ea;		
+	display: inline-block;
+	z-index: 9;
+	text-align: center;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.modal-newsletter .icon-box i {
+	font-size: 110px;
+}
+
+.modal-newsletter .form-control, .modal-newsletter .btn {
+	min-height: 46px;
+	border-radius: 0;
+}
+.modal-newsletter .form-control {
+	box-shadow: none;
+	border-color: #dbdbdb;
+}
+
+.modal-newsletter .form-control:focus {
+	border-color: #03ac13;
+	box-shadow: 0 0 8px #03ac13;
+}
+
+.modal-newsletter .btn {
+    color: #fbfcff;
+	background: #1c6e8c;
+	text-decoration: none;
+	transition: all 0.4s;
+    line-height: normal;
+	padding: 6px 20px;
+	min-width: 150px;
+	margin-left: 6px !important;
+    border: none;
+}
+
+.modal-newsletter .btn:hover, .modal-newsletter .btn:focus {
+	box-shadow: 0 0 8px #03ac13;
+	color: #03ac13;
+	background: #23395d;
+	outline: none;
+}
+
+.modal-newsletter .input-group {
+	margin-top: 30px;
+}
+
+.hint-text {
+	margin: 100px auto;
+	text-align: center;
+}
+
+/* ------------------------------------------------------------------------Footer */
+#footer-details { /* ----New-VWCC--- */
+    padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.right_column { /* ----New-VWCC--- */
+	padding-left: 50px;
+}
+
+.middle_column { /* ----New-VWCC--- */
+	padding-right: 50px;
+}
+
+footer { /* ----New-VWCC--- */
+    background-color: #1c6e8c;
+	border-top: solid;
+	border-bottom: solid;
+	border-width: 0.18rem;
+	border-color: #03ac13;
+	font-size: 14px;
+    color: white;
+    min-height: 120px;
+    margin: 0;
+}
+
+.social-links { /* ----New-VWCC--- */
+    padding-bottom: 0;
+}
+
+.social-links li a i { /* ----New-VWCC--- */
+	border: solid;
+	border-width: 0.2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+    text-align: center;	
+	margin-right: 0.5rem;
+    color: #fafafa;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+/* - The following Icon colours were derived by using a hex colour picker on the official brand media - */
+
+/* - The colour picker used was: https://imagecolorpicker.com/en/ - */
+
+.fa-facebook { /* ----New-VWCC--- */
+	background: #3b589c;
+	font-size: 1.8rem;
+	padding-top: 0.8rem;
+}
+
+.fa-instagram { /* ----New-VWCC--- */
+    background: #ef0075;
+	font-size: 2.0rem;
+	padding-top: 0.5rem;
+}
+
+.fa-twitter { /* ----New-VWCC--- */
+    background: #1da1f3;
+	font-size: 1.8rem;
+	padding-top: 0.7rem;
+}
+
+.fa-youtube { /* ----New-VWCC--- */
+    background: #Fe0000;
+	font-size: 1.8rem;
+	padding-top: 0.7rem;
+}
+
+.list-inline-item:not(:last-child) { /* ----New-VWCC--- */
+	margin-right: .65rem;
+}
+
+.fa-mobile-alt { /* ----New-VWCC--- */
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+}
+
+.fa-envelope { /* ----New-VWCC--- */
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+}
+
+/*--------------------------------------------Map*/
+div#map {
+    min-height: 37rem;
+    min-width: 36rem;
+}
+
+/* -------------------------------------------------Start of the Media Queries--- */
+/* -------------------------------------------------Start of the Media Queries--- */
+/* -------------------------------------------------Start of the Media Queries--- */
+
+
+
+/* ---------------------------------------------- -Media Query (Max-Width) 1400px */
+
+@media(max-width: 1400px) {
+}
+
+/* ------------------------------------------------Media Query (Max-Width) 1370px */
+
+@media(max-width: 1370px) {
+}
+
+
+/* ---------------------Media Query (Larger than IPAD Landscape Min-Width) 1030px */
+/* Hovers and overlays work as normal until 1030px resolution is exceeded */
+
+@media(min-width: 1030px) {
+    .social-links li a i:hover {
+        background: lightgrey;
+        color: #01161E;
+    }
+
+    .application-pdf i:hover {
+        color: #dc143c;
+    }
+}
+
+/* ---------------------Media Query (Smaller than IPAD Landscape Max-Width) 1030px */
+/* Gallery & We Need You Section Pics have constant text with opaque background */
+
+@media(max-width: 1030px) {
+	.vw-logo { /* ----New-VWCC--- */
+	width: 2.7rem;
+	}
+	.navbar-brand { /* ----New-VWCC--- */
+	border-radius: 1.5rem;
+	border-width: 0.18rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+    font-weight: bold;
+	font-size: 1.2rem;
+	margin-left: 10px;
+	color: #fbfcff;
+	}
+}
+
+/* ------------------------------------------------Media Query (Max-Width) 1280px */
+
+@media(max-width: 1280px) {
+    .list-inline-item:not(:last-child) {
+		margin-bottom: .5rem;
+    }
+}
+
+
+/* -------------------------------------------------Media Query 992px (min-width) */
+
+@media(min-width: 992px) {  
+}
+
+/* -------------------------------------------------Media Query (Max-Width) 992px */
+
+@media(max-width: 992px) {
+}
+
+/* -------------------------------------------------Media Query (Max-Width) 670px */
+
+@media(max-width: 670px) {
+}
+
+/* ----------------------------------------------- -Media Query (Max-Width) 500px */
+
+@media(max-width: 500px) {
+	.jumbotron-header {
+		font-size: 50px;
+		margin-bottom: 20px;
+    }
+ 
+	.list-inline-item:not(:last-child) {
+		margin-right: .3rem;
+    }	
+}
+/* -------------------------------------------------Media Query (Max-Width) 365px */
+
+@media(max-width: 365px) {	
+}
+
+/* -------------------------------------------------Media Query (Max-Height) 420px */
+
+@media(max-height: 420px) {
+    .jumbotron-header {
+		font-size: 30px;
+		margin-bottom: 5px;
+    }
+
+	.list-inline-item:not(:last-child) {
+		margin-right: .3rem;
+    }
+}

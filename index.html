@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML Language attribute set to English -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VW Choice Camping</title>
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <!-- Bootstrap Stylesheet Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <!-- Font Awesome Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <!-- My Local css Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- My Local js Scripts -->
+    <script src="assets/js/modal.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Start Nav Bar-->
+        <div class="container-fluid navalert-container">
+            <nav class="navbar navbar-dark navbar-expand-md">
+                <a><img class="vw-logo" src="assets/images/Logo.png" alt="VW_Logo">
+                    <span class="sr-only">WV Logo</span>
+                </a>
+                <a href="index.html" class="navbar-brand">VWCC</a><!-- Company Name Acronym -->
+                <!-- Hamburger Style Collapsible Menu for Mobile -->
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="active nav-item mr-2"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item mr-2"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Nav Bar-->
+
+    <!-- Main Picture/Title Section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <section class="text-center">
+                    <img class="background_image" src="assets/images/VWCC1.jpg" alt="VW_Camper">
+                    <h1 class="jumbotron-header fade-in-2sec">Volkswagon Choice Camping</h1>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End of Main Picture/Title Section-->
+
+    <!-- Main Write-up Section-->
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-4 bg-color-conferences section-column">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-heading uppercase">Conferences and Meetups attended</h3>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+    <!-- End of Main Write-up Section-->
+
+    <!-- Top Ten Buttons Section-->
+    <div class="container">
+        <div class="row">
+            <div>
+                <section>
+                    <div class="row btn-top">
+                        <button type="button" class="btn btn-info">Lakeside C&C Park</button>
+                        <button type="button" class="btn btn-info">Glen of Aherlow C&C Park</button>
+                        <button type="button" class="btn btn-info">Goosey Island C&C Park</button>
+                        <button type="button" class="btn btn-info">Wave Crest C&C Park</button>
+                        <button type="button" class="btn btn-info">Knockalla C&C Park</button>
+                    </div>
+                    <div class="row btn-bottom">
+                        <button type="button" class="btn btn-info">Ballinacourty House C&C Park</button>
+                        <button type="button" class="btn btn-info">Strandhill C&C Park</button>
+                        <button type="button" class="btn btn-info">Kilbroney C&C Park</button>
+                        <button type="button" class="btn btn-info">Woodlands C&C Park</button>
+                        <button type="button" class="btn btn-info">Cong C&C Park</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End of Top Ten Buttons Section-->
+
+    <!--Start Footer-->
+    <footer class="container-fluid">
+        <div id="footer-details" class="row">
+            <div class="col-sm-3">
+                <!-- 4 Day Weather widget planning -->
+                <h5 class="uppercase general-sub">4 Day Weather</h5>
+                <!-- weather widget start -->
+                <a target="_blank" href="https://www.booked.net/weather/crumlin-405375">
+                    <img src="https://w.bookcdn.com/weather/picture/32_405375_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=33488"
+                        alt="booked.net" /></a>
+                <!-- weather widget end -->
+            </div>
+            <div class="col-sm-5 middle_column">
+                <!-- About Us  -->
+                <h5 class="uppercase general-sub">Lorem Ipsum</h5>
+                <p class="inline-block">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                    Ipsum Lorem Ipsum Lorem Ipsum
+                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    Lorem Ipsum
+                    <!-- Lorem Ipsum -->
+                    <a href="Lorem Ipsum" target="_blank" class="Lorem Ipsum">
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        <span class="sr-only">Lorem Ipsum</span>
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-4 right_column">
+                <h5 class="uppercase general-sub">Look Us Up On Social Media</h5>
+                <ul class="list-inline social-links">
+                    <!-- Social Media Icons -->
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://twitter.com/">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.youtube.com/">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                            <span class="sr-only">Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Contact Details Email -->
+                <p class="link-font-1">
+                    <i class="far fa-envelope" aria-hidden="true"></i>
+                    <span class="sr-only">Email-Address</span>
+                    <a class="link-font"
+                        href="mailto:info@rseclayer1.com?subject:General%20Question">Email:bookings@vwcc.com</a>
+                </p>
+                <!-- Contact Details Phone Number -->
+                <p class="link-font-1">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <span class="sr-only">Mobile-Contact-Number</span>
+                    <a class="link-font" href="tel:+555(0)55554433221">+555(0)55-554433221</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--Modal Start-->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-newsletter">
+            <div class="modal-content">
+                <form action="/examples/actions/confirmation.php" method="post">
+                    <div class="modal-header">
+                        <h4>Subscribe to our newsletter!</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true"><span>&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Signup to our weekly newsletter to get the latest package deals available at Irelands top 10
+                            campervan campsites.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <span class="input-group-btn">
+                                <input type="submit" class="btn btn-primary" value="Subscribe">
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Modal End-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCaHrvOepUJ2ZmtfifaAgpQegx5TkU7AoU&callback=initMap"
+        type="text/javascript"></script>
+    <script src="assets/js/maps.js"></script>
+</body>
+
+</html>
