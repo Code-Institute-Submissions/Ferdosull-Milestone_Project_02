@@ -17,12 +17,6 @@ body { /* ----New-VWCC--- */
 	background: #f0f0f0;
 }
 
-.opaque { /* ----New-VWCC--- */
-    background-color: rgba(0, 0, 0, 0.1);
-    padding-left: 0.3rem;
-    border-radius: 0.3rem;
-}
-
 .link-font { /* ----New-VWCC--- */
     color: #fbfcff;
 }
@@ -97,6 +91,14 @@ body { /* ----New-VWCC--- */
     background-color:#23395d;
 }
 
+/* --------------------------------------------------------------------Image Fades*/
+
+#cf7 img.opaque {
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+}
+
 /* ------------------------------------------------------------------------Buttons*/
 
 .btn-info { /* ----New-VWCC--- */
@@ -126,16 +128,45 @@ body { /* ----New-VWCC--- */
 /* ---------Off White = #FAFAFA -- */
 
 /* -----------------------------------------------------------------Image Styling */
-	
+
 .background_image { /* ----New-VWCC--- */
 	width: 100%;
-	padding-left: 15%;
-	padding-right: 15%;
-	background-color: #f0f0f0;
+	padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #f0f0f0;
+    position:relative;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.background_image_ab { /* ----New-VWCC--- */
+	width: 100%;
+	padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #f0f0f0;
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
 }
 
 .container { /* ----New-VWCC--- */
-	background: #f0f0f0;
+    position: relative;
 }
 
 /* ----------------------------------------------------------------------Headings */

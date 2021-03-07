@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- My Local js Scripts -->
     <script src="assets/js/modal.js"></script>
+    <script src="assets/js/button-logic.js"></script>
 </head>
 
 <body>
@@ -62,9 +63,10 @@
     <!-- Main Picture/Title Section-->
     <div class="container-fluid">
         <div class="row">
-            <div>
-                <section class="text-center">
-                    <img class="background_image" src="assets/images/VWCC1.jpg" alt="VW_Camper">
+            <div class="shadow">
+                <section class="text-center" id="cf7">
+                    <img class="background_image opaque" id="camper" src="assets/images/VWCC1.jpg" alt="VW_Camper">
+                    <img class="background_image_ab" src="assets/images/lakeside.jpg" alt="lakeside">
                     <h1 class="jumbotron-header fade-in-2sec">Volkswagon Choice Camping</h1>
                 </section>
             </div>
@@ -72,43 +74,43 @@
     </div>
     <!-- End of Main Picture/Title Section-->
 
-    <!-- Main Write-up Section-->
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-4 bg-color-conferences section-column">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="section-heading uppercase">Conferences and Meetups attended</h3>
-                </div>
-            </div>
-            <div id="map"></div>
-        </div>
-    </div>
-    <!-- End of Main Write-up Section-->
-
     <!-- Top Ten Buttons Section-->
     <div class="container">
         <div class="row">
             <div>
                 <section>
                     <div class="row btn-top">
-                        <button type="button" class="btn btn-info">Lakeside C&C Park</button>
-                        <button type="button" class="btn btn-info">Glen of Aherlow C&C Park</button>
-                        <button type="button" class="btn btn-info">Goosey Island C&C Park</button>
-                        <button type="button" class="btn btn-info">Wave Crest C&C Park</button>
-                        <button type="button" class="btn btn-info">Knockalla C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction1()">Lakeside C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction2()">Glen of Aherlow C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction3()">Goosey Island C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction4()">Wave Crest C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction5()">Knockalla C&C Park</button>
                     </div>
                     <div class="row btn-bottom">
-                        <button type="button" class="btn btn-info">Ballinacourty House C&C Park</button>
-                        <button type="button" class="btn btn-info">Strandhill C&C Park</button>
-                        <button type="button" class="btn btn-info">Kilbroney C&C Park</button>
-                        <button type="button" class="btn btn-info">Woodlands C&C Park</button>
-                        <button type="button" class="btn btn-info">Cong C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction6()">Ballinacourty House C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction7()">Strandhill C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction8()">Kilbroney C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction9()">Woodlands C&C Park</button>
+                        <button type="button" class="btn btn-info" onclick="myFunction10()">Cong C&C Park</button>
                     </div>
                 </section>
             </div>
         </div>
     </div>
     <!-- End of Top Ten Buttons Section-->
+
+    <!-- Google Maps API-->
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-4 bg-color-conferences section-column">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-heading uppercase" id="heading">Conferences and Meetups attended</h3>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+    <!-- End of Google Maps API-->
 
     <!--Start Footer-->
     <footer class="container-fluid">
