@@ -31,8 +31,6 @@
     <!-- My Local css Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- My Local js Scripts -->
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/button-logic.js"></script>
 </head>
 
 <body>
@@ -64,10 +62,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="shadow">
-                <section class="text-center" id="cf7">
-                    <img class="background_image opaque" id="camper" src="assets/images/VWCC1.jpg" alt="VW_Camper">
-                    <img class="background_image_ab" src="assets/images/lakeside.jpg" alt="lakeside">
-                    <h1 class="jumbotron-header fade-in-2sec">Volkswagon Choice Camping</h1>
+                <section class="text-center" id="image-change">
+                    <img class="background_image opaque" src="assets/images/VWCC1.jpg" alt="VW_Camper"/>
+                    <img class="background_image_ab" src="assets/images/lakeside.jpg" alt="lakeside"/>
+                    <img class="background_image_ab" src="assets/images/glenaherlow.jpg" alt="Glen of Aherlow"/>
+                    <img class="background_image_ab" src="assets/images/goosey.jpg" alt="Goosey Island"/>
+                    <img class="background_image_ab" src="assets/images/wavecrest.jpg" alt="Glen of Aherlow"/>
+                    <img class="background_image_ab" src="assets/images/knockalla.jpg" alt="lakeside"/>
+                    <h1 class="jumbotron-header fade-in-2sec" id="change-text">Volkswagon Choice Camping</h1>
                 </section>
             </div>
         </div>
@@ -79,19 +81,12 @@
         <div class="row">
             <div>
                 <section>
-                    <div class="row btn-top">
+                    <div class="row btn-top btn-bottom">
                         <button type="button" class="btn btn-info" onclick="myFunction1()">Lakeside C&C Park</button>
                         <button type="button" class="btn btn-info" onclick="myFunction2()">Glen of Aherlow C&C Park</button>
                         <button type="button" class="btn btn-info" onclick="myFunction3()">Goosey Island C&C Park</button>
                         <button type="button" class="btn btn-info" onclick="myFunction4()">Wave Crest C&C Park</button>
                         <button type="button" class="btn btn-info" onclick="myFunction5()">Knockalla C&C Park</button>
-                    </div>
-                    <div class="row btn-bottom">
-                        <button type="button" class="btn btn-info" onclick="myFunction6()">Ballinacourty House C&C Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction7()">Strandhill C&C Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction8()">Kilbroney C&C Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction9()">Woodlands C&C Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction10()">Cong C&C Park</button>
                     </div>
                 </section>
             </div>
@@ -215,7 +210,7 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCaHrvOepUJ2ZmtfifaAgpQegx5TkU7AoU&callback=initMap"
         type="text/javascript"></script>
-    <script src="assets/js/maps.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
