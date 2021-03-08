@@ -11,10 +11,36 @@
 	letter-spacing: 2px;
 }
 
+.write-up {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
 body { /* ----New-VWCC--- */
     font-family: 'Voltaire', sans-serif;
 	letter-spacing: .03rem;
 	background: #f0f0f0;
+}
+
+.about-body1 {
+    margin-top: 2rem;
+    font-family: 'Voltaire', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .03rem;
+    color: #1c6e8c;
+}
+
+.about-body2 {
+    font-family: 'Voltaire', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: .03rem;
+    color: #1c6e8c;
+}
+
+.blue-text {
+    font-weight: bold;
+    color: #1c6e8c;
 }
 
 .link-font { /* ----New-VWCC--- */
@@ -111,14 +137,14 @@ body { /* ----New-VWCC--- */
 /* ------------------------------------------------------------------------Buttons*/
 
 .btn-info { /* ----New-VWCC--- */
-	width: 14rem;
+	width: 12rem;
 	height: 4rem;
-	margin: 0.3rem;
+    margin: 0.3rem;
 	margin-top: 1rem;
 }
 
 .btn-top { /* ----New-VWCC--- */
-	margin-top: 3rem;
+    margin-left: 3rem;
 	background-color: #f0f0f0;
 }
 
@@ -185,11 +211,11 @@ body { /* ----New-VWCC--- */
 	text-shadow:2px 0 0 #03ac13,0 2px 0 #03ac13,2px 0 0 #03ac13,0 2px 0 #03ac13;
 	font-family: 'Prompt', sans-serif;
     font-weight: bold;
-	font-size: 2.8rem;
+	font-size: 3.5vw;
 	letter-spacing: 3px;
     margin-bottom: 50px;
-    margin-top: 100px;
-	margin-right: 7.5%;
+    margin-top: 4.2rem;
+	margin-right: 2%;
 	position: absolute;
 	top: 8px;
 	right: 10%;
@@ -525,8 +551,10 @@ footer { /* ----New-VWCC--- */
 
 /*--------------------------------------------Map*/
 div#map {
-    min-height: 37rem;
-    min-width: 36rem;
+    height: 34rem;
+    width: 24rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* -------------------------------------------------Start of the Media Queries--- */
@@ -608,11 +636,6 @@ div#map {
 /* ----------------------------------------------- -Media Query (Max-Width) 500px */
 
 @media(max-width: 500px) {
-	.jumbotron-header {
-		font-size: 50px;
-		margin-bottom: 20px;
-    }
- 
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
     }	
@@ -625,11 +648,6 @@ div#map {
 /* -------------------------------------------------Media Query (Max-Height) 420px */
 
 @media(max-height: 420px) {
-    .jumbotron-header {
-		font-size: 30px;
-		margin-bottom: 5px;
-    }
-
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
     }

@@ -96,7 +96,7 @@ function myFunction2() {
     elem.classList.remove('show_yourself');
     elem.classList.add('hide');
     elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Glen of Aherlow Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000); 
+    setTimeout(() => { elem.innerHTML = "The Glen of Aherlow Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000); 
 }
 
 // Ranked Number 3 C&C location Goosey Island //
@@ -128,7 +128,7 @@ function myFunction3() {
     elem.classList.remove('show_yourself');
     elem.classList.add('hide');
     elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Goosey Island Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000); 
+    setTimeout(() => { elem.innerHTML = "Goosey Isle Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000); 
 }
 
 // Ranked Number 4 C&C location Wavecrest //
@@ -160,7 +160,7 @@ function myFunction4() {
     elem.classList.remove('show_yourself');
     elem.classList.add('hide');
     elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Wave Crest Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000); 
+    setTimeout(() => { elem.innerHTML = "Wavecrest Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000); 
 }
 
 // Ranked Number 5 C&C location Knockalla //
