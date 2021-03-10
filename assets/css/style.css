@@ -361,7 +361,7 @@ body { /* ----New-VWCC--- */
 }
     
 .modal-header {
-	font-family: 'Prompt', sans-serif;
+    font-family: 'Prompt', sans-serif;
 }
     
 .modal-newsletter {	
@@ -386,7 +386,7 @@ body { /* ----New-VWCC--- */
 
 .modal-newsletter h4 {
 	color: #fbfcff;
-	font-size: 26px;
+	font-size: 20px;
 	letter-spacing: 1.5px;
 	margin: 0;
 	font-weight: bold;
@@ -547,6 +547,16 @@ footer { /* ----New-VWCC--- */
 .fa-envelope { /* ----New-VWCC--- */
     font-size: 1.2rem;
     margin-right: 0.4rem;
+}
+
+.fa-file-signature { /* ----New-VWCC--- */
+    color: #fafafa;
+    font-size: 1.5rem;
+}
+
+.fa-file-signature:hover { /* ----New-VWCC--- */
+    color: #03ac13;
+    font-size: 1.5rem;
 }
 
 /*--------------------------------------------Map*/

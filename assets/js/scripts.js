@@ -19,9 +19,14 @@ sitesObj = {"dayrate": [ "€22 per night", "€20 per night", "€16 per night"
 
 // Declared Global Weather links to be swapped out by js //
 
-var donegalWeather1 = "https://www.booked.net/weather/donegal-town-19234";
-var donegalWeather2 = "https://w.bookcdn.com/weather/picture/32_19234_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=31365";
-
+var donegalWeather1 = "https://www.booked.net/weather/county-donegal-47201";
+var donegalWeather2 = "https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
+var tippWeather1 = "https://www.booked.net/weather/tipperary-26309";
+var tippWeather2 = "https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
+var kerryWeather1 = "https://www.booked.net/weather/county-kerry-47139";
+var kerryWeather2 = "https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
+var limerickWeather1 = "https://www.booked.net/weather/limerick-18701";
+var limerickWeather2 = "https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
 // Loading of the GoogleMaps API Visuals and locations //
 
 function initMap() {
@@ -100,11 +105,10 @@ function myFunction1() {
     setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
 
     var image = document.getElementById("weather1");
-    image.setAttribute("href", donegalWeather1);
+    image.setAttribute("href", limerickWeather1);
 
     var link = document.getElementById("weather2");
-    link.setAttribute("src", donegalWeather2);
-
+    link.setAttribute("src", limerickWeather2);
 }
 
 // Ranked Number 2 C&C location Glen of Aherlow //
@@ -146,6 +150,12 @@ function myFunction2() {
     setTimeout(() => { text.innerHTML = glenaherlow; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
     
     setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
+    
+    var image = document.getElementById("weather1");
+    image.setAttribute("href", tippWeather1);
+
+    var link = document.getElementById("weather2");
+    link.setAttribute("src", tippWeather2);
 }
 
 // Ranked Number 3 C&C location Goosey Island //
@@ -187,6 +197,12 @@ function myFunction3() {
     setTimeout(() => { text.innerHTML = goosey; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
     
     setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
+        
+    var image = document.getElementById("weather1");
+    image.setAttribute("href", kerryWeather1);
+
+    var link = document.getElementById("weather2");
+    link.setAttribute("src", kerryWeather2);
 }
 
 // Ranked Number 4 C&C location Wavecrest //
@@ -228,6 +244,12 @@ function myFunction4() {
     setTimeout(() => { text.innerHTML = wavecrest; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
     
     setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
+    
+    var image = document.getElementById("weather1");
+    image.setAttribute("href", kerryWeather1);
+
+    var link = document.getElementById("weather2");
+    link.setAttribute("src", kerryWeather2);
 }
 
 // Ranked Number 5 C&C location Knockalla //
@@ -269,4 +291,10 @@ function myFunction5() {
     setTimeout(() => { text.innerHTML = knockalla; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
     
     setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
+    
+    var image = document.getElementById("weather1");
+    image.setAttribute("href", donegalWeather1);
+
+    var link = document.getElementById("weather2");
+    link.setAttribute("src", donegalWeather2);
 }
