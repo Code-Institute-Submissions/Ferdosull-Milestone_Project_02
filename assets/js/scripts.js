@@ -1,4 +1,66 @@
-// Declared Global Text Variables //
+// Declared Global const campsite object //
+
+const campsites = {
+    vwcc: {
+        name: 'VWCC Choice Camping',
+        description: 'VWCC offers 5 of Irelands finest campsites. Each with its own unique characteristics and atmosphere. Locally, there’s a large range of restaurants too. These locations offer large and luxurious mobile homes or, arrive in your own campervan.',
+        coordinates: {lat: 53.42830696507892, lng: -7.939229895133652},
+        weatherUrls: {url1:'https://www.booked.net/weather/dublin-18082', url2:'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
+        heroImageSrc:'assets/images/VWCC1.jpg',
+        campsiteDetails: {dayrate: '', weekdayrate: '', weekendrate: '', capacity: '', advannot: ''}
+    }, // completed //
+    lakeside: {
+        name: 'Lakeside Caravan & Camping',
+        description: 'Welcome to Lakeside where you will find a unique campsite on the shores of the beautiful Lough Derg. We welcome you to a place where one can escape the stresses and strains of everyday life. We are a large, nature orientated campsite set in the forest and open green spaces, there is something here for everyone.',
+        coordinates: {lat: 52.9277403958966, lng: -8.420661941089131},
+        weatherUrls: {url1:'https://www.booked.net/weather/limerick-18701', url2:'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
+        heroImageSrc:'assets/images/lakeside.jpg',
+        campsiteDetails: {dayrate: '€22 per night', weekdayrate: '€100 per week', weekendrate: '€50 Sat & Sun', capacity: '55 Pitches', advannot: '1 day'}
+    }, // completed //
+    glenaherlow: {
+        name: 'Glen of Aherlow C&C Park',
+        description: 'Spectacular scenery, top class amenities and a warm welcome await you here at The Glen of Aherlow Caravan & Camping Park. This Park is situated right in the heart of one of the most picturesque valleys in Ireland. Surrounded by woodland and farmland the Park offers a quiet and relaxing holiday in the countryside.',
+        coordinates: {lat: 52.419866625338784, lng: -8.187759105906318},
+        weatherUrls: {url1:'https://www.booked.net/weather/tipperary-26309', url2:'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
+        heroImageSrc:'assets/images/glenaherlow.jpg',
+        campsiteDetails: {dayrate: '€20 per night', weekdayrate: '€95 per week', weekendrate: '€50 Sat & Sun', capacity: '25 Pitches', advannot: '1 week'}
+    }, // completed //
+    goosey: {
+        name: 'Goosey Island C&C Park',
+        description: 'Cast a line from the river bank, stroll to the local pubs and Cafes. Explore the Kerry Way and Sneems National Award Winning Sculpture Parks. All from this from Gossey Islands uniquely located Park in the heart of Irelands Tidiest Village (1987). Golf, Fishing, Tennis, Pitch & Putt and Hiking available locally.',
+        coordinates: {lat: 51.83744663817569, lng: -9.900147501388021},
+        weatherUrls: {url1:'https://www.booked.net/weather/county-kerry-47139', url2:'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
+        heroImageSrc:'assets/images/goosey.jpg',
+        campsiteDetails: {dayrate: '€16 per night', weekdayrate: '€75 per week', weekendrate: '€40 Sat & Sun', capacity: '12 Pitches', advannot: '1 week'}
+    }, // completed //
+    wavecrest: {
+        name: 'Wave Crest C&C Park',
+        description: 'Wave Crest caravan and camping site is a 4 star, friendly, informal and family-run camp site in Caherdaniel on the Ring of Kerry, Ireland. This picturesque waterfront site with unique panoramic sea views offers the perfect base for a relaxing camping holiday in Ireland with friendly and helpful staff.',
+        coordinates: {lat: 51.758844440963365, lng: -10.091116730629471},
+        weatherUrls: {url1:'https://www.booked.net/weather/county-kerry-47139', url2:'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
+        heroImageSrc:'assets/images/wavecrest.jpg',
+        campsiteDetails: {dayrate: '€15 per night', weekdayrate: '€70 per week', weekendrate: '€40 Sat & Sun', capacity: '35 Pitches', advannot: '2 week'}
+    }, // completed //
+    knockalla: {
+        name: 'Knockalla C&C Park',
+        description: 'Nestled between the slopes of the Knockalla Mountains and the golden sands of Ballymastocker Bay in Portsalon, Co. Donegal, Knockalla Caravan & Camping Park is the perfect location to escape to. Soak up the stunning Knockalla landscape and feel the sand beneath your feet. Donegal has so much to offer.',
+        coordinates: {lat: 55.18304735750677, lng: -7.61241954377543},
+        weatherUrls: {url1:'https://www.booked.net/weather/county-donegal-47201', url2:'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
+        heroImageSrc:'assets/images/knockalla.jpg',
+        campsiteDetails: {dayrate: '€18 per night', weekdayrate: '€85 per week', weekendrate: '€45 Sat & Sun', capacity: '22 Pitches', advannot: '1 day'}
+    },
+}
+
+var printy; // declared null or empty variable //
+console.log(printy); // printing to prove that it is empty //
+function printys() { // function to update the global declared variable //
+    return printy = Object.keys(campsites).map((key) => campsites[key]['heroImageSrc'])[3]; // grabbing the hero image from the fourth object //
+}
+printys(); // carrying out the function //
+console.log(printy); // printing after the local to global variable update //
+
+
+
 
 var vwcc = "VWCC offers 5 of Irelands finest campsites. Each with its own unique characteristics and atmosphere. Locally, there’s a large range of restaurants too. These locations offer large and luxurious mobile homes or, arrive in your own campervan.";
 var lakeside = "Welcome to Lakeside where you will find a unique campsite on the shores of the beautiful Lough Derg. We welcome you to a place where one can escape the stresses and strains of everyday life. We are a large, nature orientated campsite set in the forest and open green spaces, there is something here for everyone.";
