@@ -592,10 +592,6 @@ div#map {
         background: lightgrey;
         color: #01161E;
     }
-
-    .application-pdf i:hover {
-        color: #dc143c;
-    }
 }
 
 /* ---------------------Media Query (Smaller than IPAD Landscape Max-Width) 1030px */
