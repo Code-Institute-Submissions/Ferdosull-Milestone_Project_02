@@ -72,6 +72,7 @@ var newHeroImage;
 var newWeather1;
 var newWeather2;
 var newAboutTxt;
+var fadeEffect;
 
 function initMod(buttonNum) { // using button clicks and respective numbers to update the function from the object //
     return (name = Object.keys(campsites).map((key) => campsites[key]['name'])[buttonNum],
@@ -127,23 +128,20 @@ function setMap() { // function to change the map locations, name of location, c
     var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
 }
 
+// Change Hero Image with JS//
+function changeHeroImage() { // function to change the background image at the top of the page //
+    var heroDiv = document.getElementById("image-change"); // find the image by id //
+    var heroImage = document.getElementById("heroImage");
+    $('#image-change').toggleClass("hide")
+    setTimeout(() => { heroImage.src = newHeroImage; $('#image-change').toggleClass("show_yourself")}, 1 * 500);
+    setTimeout(() => { $('#image-change').removeClass("show_yourself")}, 1 * 1000);
+    setTimeout(() => { $('#image-change').removeClass("hide")}, 1 * 1000);
+    //$('#image-change').toggleClass("hide")
+}
+
 // Scroll back to top of page //
 function scrollTop() { // this function ensures that the person viewing the page is brought back to the top to see the image change //
     setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 1 * 1000);
-}
-
-// Change Hero Image with JS//
-function changeHeroImage() { // function to change the background image at the top of the page //
-    var fadeTarget = document.getElementById("heroImage"); // find the image by id //
-    var fadeOutEffect = setInterval(function () {
-        fadeTarget.style.opacity -= 0.1;
-    }, 200); // setting fade out parameters (opacity/time) //
-    setTimeout(() => {
-        var fadeInEffect = setInterval(function () { // setting a wait duration after fade out of initial image before changing to another image //
-            fadeTarget.src = newHeroImage;
-            fadeTarget.style.opacity = 1;
-        }, 200);
-    }, 1 * 1000);  // bringing opacity back to "1" after image change //
 }
 
 // Weather set with JS //
@@ -173,9 +171,9 @@ function changeAboutText() {
 }
 
 function executeAll() { // executing all functions required to update the page with respect to the button pressed //
-    scrollTop(); // scrolling back to the top //
     setMap(); // setting the Map //
     changeHeroImage(); // changing the hero image //
+    scrollTop(); // scrolling back to the top //
     weatherSet(); // setting the weather depending on the new location //
     changeHeroImageText(); // changing the hero image text //
     changeAboutText(); // changing the about us text //
