@@ -132,11 +132,11 @@ function setMap() { // function to change the map locations, name of location, c
 function changeHeroImage() { // function to change the background image at the top of the page //
     var heroDiv = document.getElementById("image-change"); // find the image by id //
     var heroImage = document.getElementById("heroImage");
-    $('#image-change').toggleClass("hide")
-    setTimeout(() => { heroImage.src = newHeroImage; $('#image-change').toggleClass("show_yourself")}, 1 * 500);
-    setTimeout(() => { $('#image-change').removeClass("show_yourself")}, 1 * 1000);
-    setTimeout(() => { $('#image-change').removeClass("hide")}, 1 * 1000);
-    //$('#image-change').toggleClass("hide")
+    $('#image-change').addClass("hide")
+    setTimeout(() => { $('#image-change').addClass("hide1")}, 1 * 450);
+    setTimeout(() => { heroImage.src = newHeroImage }, 1 * 580);
+    setTimeout(() => { $('#image-change').removeClass("hide"), $('#image-change').removeClass("hide1"), $('#image-change').addClass("show_yourself")}, 1 * 650);
+    setTimeout(() => { $('#image-change').removeClass("show_yourself")}, 1 * 1200);
 }
 
 // Scroll back to top of page //
