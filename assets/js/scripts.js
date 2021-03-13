@@ -1,362 +1,182 @@
-// Declared Global const campsite object //
+// Modal Js //
+$(document).ready(showModal()); // automatic loading once landed at the website and at refresh
 
+function showModal() { // modal loaded from the icon in the footer //
+    $("#myModal").modal('show');
+}
+
+// Declared Global const campsite object //
 const campsites = {
     vwcc: {
         name: 'VWCC Choice Camping',
         description: 'VWCC offers 5 of Irelands finest campsites. Each with its own unique characteristics and atmosphere. Locally, there’s a large range of restaurants too. These locations offer large and luxurious mobile homes or, arrive in your own campervan.',
-        coordinates: {lat: 53.42830696507892, lng: -7.939229895133652},
-        weatherUrls: {url1:'https://www.booked.net/weather/dublin-18082', url2:'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
-        heroImageSrc:'assets/images/VWCC1.jpg',
-        campsiteDetails: {dayrate: '', weekdayrate: '', weekendrate: '', capacity: '', advannot: ''}
-    }, // completed //
+        coordinates: [53.42830696507892, -7.939229895133652],
+        zoom: 10,
+        weatherUrls: ['https://www.booked.net/weather/dublin-18082', 'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        heroImageSrc: 'assets/images/VWCC1.jpg',
+        campsiteDetails: { dayrate: '', weekdayrate: '', weekendrate: '', capacity: '', advannot: '' }
+    },
     lakeside: {
         name: 'Lakeside Caravan & Camping',
         description: 'Welcome to Lakeside where you will find a unique campsite on the shores of the beautiful Lough Derg. We welcome you to a place where one can escape the stresses and strains of everyday life. We are a large, nature orientated campsite set in the forest and open green spaces, there is something here for everyone.',
-        coordinates: {lat: 52.9277403958966, lng: -8.420661941089131},
-        weatherUrls: {url1:'https://www.booked.net/weather/limerick-18701', url2:'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
-        heroImageSrc:'assets/images/lakeside.jpg',
-        campsiteDetails: {dayrate: '€22 per night', weekdayrate: '€100 per week', weekendrate: '€50 Sat & Sun', capacity: '55 Pitches', advannot: '1 day'}
-    }, // completed //
+        coordinates: [52.9277403958966, -8.420661941089131],
+        zoom: 10,
+        weatherUrls: ['https://www.booked.net/weather/limerick-18701', 'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        heroImageSrc: 'assets/images/lakeside.jpg',
+        campsiteDetails: { dayrate: '€22 per night', weekdayrate: '€100 per week', weekendrate: '€50 Sat & Sun', capacity: '55 Pitches', advannot: '1 day' }
+    },
     glenaherlow: {
         name: 'Glen of Aherlow C&C Park',
         description: 'Spectacular scenery, top class amenities and a warm welcome await you here at The Glen of Aherlow Caravan & Camping Park. This Park is situated right in the heart of one of the most picturesque valleys in Ireland. Surrounded by woodland and farmland the Park offers a quiet and relaxing holiday in the countryside.',
-        coordinates: {lat: 52.419866625338784, lng: -8.187759105906318},
-        weatherUrls: {url1:'https://www.booked.net/weather/tipperary-26309', url2:'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
-        heroImageSrc:'assets/images/glenaherlow.jpg',
-        campsiteDetails: {dayrate: '€20 per night', weekdayrate: '€95 per week', weekendrate: '€50 Sat & Sun', capacity: '25 Pitches', advannot: '1 week'}
-    }, // completed //
+        coordinates: [52.419866625338784, -8.187759105906318],
+        zoom: 10,
+        weatherUrls: ['https://www.booked.net/weather/tipperary-26309', 'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        heroImageSrc: 'assets/images/glenaherlow.jpg',
+        campsiteDetails: { dayrate: '€20 per night', weekdayrate: '€95 per week', weekendrate: '€50 Sat & Sun', capacity: '25 Pitches', advannot: '1 week' }
+    },
     goosey: {
         name: 'Goosey Island C&C Park',
         description: 'Cast a line from the river bank, stroll to the local pubs and Cafes. Explore the Kerry Way and Sneems National Award Winning Sculpture Parks. All from this from Gossey Islands uniquely located Park in the heart of Irelands Tidiest Village (1987). Golf, Fishing, Tennis, Pitch & Putt and Hiking available locally.',
-        coordinates: {lat: 51.83744663817569, lng: -9.900147501388021},
-        weatherUrls: {url1:'https://www.booked.net/weather/county-kerry-47139', url2:'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
-        heroImageSrc:'assets/images/goosey.jpg',
-        campsiteDetails: {dayrate: '€16 per night', weekdayrate: '€75 per week', weekendrate: '€40 Sat & Sun', capacity: '12 Pitches', advannot: '1 week'}
-    }, // completed //
+        coordinates: [51.83744663817569, -9.900147501388021],
+        zoom: 10,
+        weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        heroImageSrc: 'assets/images/goosey.jpg',
+        campsiteDetails: { dayrate: '€16 per night', weekdayrate: '€75 per week', weekendrate: '€40 Sat & Sun', capacity: '12 Pitches', advannot: '1 week' }
+    },
     wavecrest: {
         name: 'Wave Crest C&C Park',
         description: 'Wave Crest caravan and camping site is a 4 star, friendly, informal and family-run camp site in Caherdaniel on the Ring of Kerry, Ireland. This picturesque waterfront site with unique panoramic sea views offers the perfect base for a relaxing camping holiday in Ireland with friendly and helpful staff.',
-        coordinates: {lat: 51.758844440963365, lng: -10.091116730629471},
-        weatherUrls: {url1:'https://www.booked.net/weather/county-kerry-47139', url2:'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
-        heroImageSrc:'assets/images/wavecrest.jpg',
-        campsiteDetails: {dayrate: '€15 per night', weekdayrate: '€70 per week', weekendrate: '€40 Sat & Sun', capacity: '35 Pitches', advannot: '2 week'}
-    }, // completed //
+        coordinates: [51.758844440963365, -10.091116730629471],
+        zoom: 10,
+        weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        heroImageSrc: 'assets/images/wavecrest.jpg',
+        campsiteDetails: { dayrate: '€15 per night', weekdayrate: '€70 per week', weekendrate: '€40 Sat & Sun', capacity: '35 Pitches', advannot: '2 week' }
+    },
     knockalla: {
         name: 'Knockalla C&C Park',
         description: 'Nestled between the slopes of the Knockalla Mountains and the golden sands of Ballymastocker Bay in Portsalon, Co. Donegal, Knockalla Caravan & Camping Park is the perfect location to escape to. Soak up the stunning Knockalla landscape and feel the sand beneath your feet. Donegal has so much to offer.',
-        coordinates: {lat: 55.18304735750677, lng: -7.61241954377543},
-        weatherUrls: {url1:'https://www.booked.net/weather/county-donegal-47201', url2:'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'},
-        heroImageSrc:'assets/images/knockalla.jpg',
-        campsiteDetails: {dayrate: '€18 per night', weekdayrate: '€85 per week', weekendrate: '€45 Sat & Sun', capacity: '22 Pitches', advannot: '1 day'}
+        coordinates: [55.18304735750677, -7.61241954377543],
+        zoom: 10,
+        weatherUrls: ['https://www.booked.net/weather/county-donegal-47201', 'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        heroImageSrc: 'assets/images/knockalla.jpg',
+        campsiteDetails: { dayrate: '€18 per night', weekdayrate: '€85 per week', weekendrate: '€45 Sat & Sun', capacity: '22 Pitches', advannot: '1 day' }
     },
 }
 
-var printy; // declared null or empty variable //
-console.log(printy); // printing to prove that it is empty //
-function printys() { // function to update the global declared variable //
-    return printy = Object.keys(campsites).map((key) => campsites[key]['heroImageSrc'])[3]; // grabbing the hero image from the fourth object //
+// Declaring "null" ariables to be updated on button clicks //
+var name;
+var latitude;
+var longitude;
+var zoomSize;
+var newHeroImage;
+var newWeather1;
+var newWeather2;
+var newAboutTxt;
+
+function initMod(buttonNum) { // using button clicks and respective numbers to update the function from the object //
+    return (name = Object.keys(campsites).map((key) => campsites[key]['name'])[buttonNum],
+        latitude = Object.keys(campsites).map((key) => campsites[key]['coordinates'])[buttonNum][0],
+        longitude = Object.keys(campsites).map((key) => campsites[key]['coordinates'])[buttonNum][1],
+        zoomSize = Object.keys(campsites).map((key) => campsites[key]['zoom'])[buttonNum],
+        newHeroImage = Object.keys(campsites).map((key) => campsites[key]['heroImageSrc'])[buttonNum],
+        newWeather1 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][0],
+        newWeather2 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][1],
+        newAboutTxt = Object.keys(campsites).map((key) => campsites[key]['description'])[buttonNum]),
+        executeAll();
 }
-printys(); // carrying out the function //
-console.log(printy); // printing after the local to global variable update //
 
-
-
-
-var vwcc = "VWCC offers 5 of Irelands finest campsites. Each with its own unique characteristics and atmosphere. Locally, there’s a large range of restaurants too. These locations offer large and luxurious mobile homes or, arrive in your own campervan.";
-var lakeside = "Welcome to Lakeside where you will find a unique campsite on the shores of the beautiful Lough Derg. We welcome you to a place where one can escape the stresses and strains of everyday life. We are a large, nature orientated campsite set in the forest and open green spaces, there is something here for everyone.";
-var glenaherlow = "Spectacular scenery, top class amenities and a warm welcome await you here at The Glen of Aherlow Caravan & Camping Park. This Park is situated right in the heart of one of the most picturesque valleys in Ireland. Surrounded by woodland and farmland the Park offers a quiet and relaxing holiday in the countryside.";
-var goosey = "Cast a line from the river bank, stroll to the local pubs and Cafes. Explore the Kerry Way and Sneem's National Award Winning Sculpture Parks. All from this from Gossey Islands uniquely located Park in the heart of Irelands Tidiest Village (1987). Golf, Fishing, Tennis, Pitch & Putt and Hiking available locally.";
-var wavecrest = "Wave Crest caravan and camping site is a 4 star, friendly, informal and family-run camp site in Caherdaniel on the Ring of Kerry, Ireland. This picturesque waterfront site with unique panoramic sea views offers the perfect base for a relaxing camping holiday in Ireland with friendly and helpful staff.";
-var knockalla = "Nestled between the slopes of the Knockalla Mountains and the golden sands of Ballymastocker Bay in Portsalon, Co. Donegal, Knockalla Caravan & Camping Park is the perfect location to escape to. Soak up the stunning Knockalla landscape and feel the sand beneath your feet. Donegal has so much to offer.";
- 
-// Declared Global JSON Array for individual site information //
-
-var sitesObj = "";
-
-sitesObj = {"dayrate": [ "€22 per night", "€20 per night", "€16 per night", "€15 per night", "€18 per night" ] },
-    { "weekdayrate": ["€100 per week", "€95 per week", "€75 per week", "€70 per week", "€85 per week" ] },
-    { "weekendrate": ["€50 Sat & Sun", "€50 Sat & Sun", "€40 Sat & Sun", "€40 Sat & Sun", "€45 Sat & Sun" ] },
-    { "capacity": [ "55 Pitches", "25 Pitches", "12 Pitches", "35 Pitches", "22 Pitches" ] },
-    { "advannot": [ "1 day", "1 week", "1 week", "2 week", "1 day" ] };
-
-// Declared Global Weather links to be swapped out by js //
-
-var donegalWeather1 = "https://www.booked.net/weather/county-donegal-47201";
-var donegalWeather2 = "https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
-var tippWeather1 = "https://www.booked.net/weather/tipperary-26309";
-var tippWeather2 = "https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
-var kerryWeather1 = "https://www.booked.net/weather/county-kerry-47139";
-var kerryWeather2 = "https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
-var limerickWeather1 = "https://www.booked.net/weather/limerick-18701";
-var limerickWeather2 = "https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575";
-// Loading of the GoogleMaps API Visuals and locations //
-
+// Initial Loading of the GoogleMaps API Visuals and locations //
 function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
         zoom: 6.7,
-        center: {
-            lat: 53.42830696507892, 
-            lng: -7.939229895133652
-        }
+        center: { lat: 53.42830696507892, lng: -7.939229895133652 }
     });
-
     var labels = "ABCDE";
-
     var locations = [
         { lat: 52.9277403958966, lng: -8.420661941089131 }, // #1 //
         { lat: 52.419866625338784, lng: -8.187759105906318 }, // #2 //
-        { lat: 51.83744663817569,  lng: -9.900147501388021 }, // #3 //
+        { lat: 51.83744663817569, lng: -9.900147501388021 }, // #3 //
         { lat: 51.758844440963365, lng: -10.091116730629471 }, // #4 //
         { lat: 55.18304735750677, lng: -7.61241954377543 } // #5 //
     ];
-
     var markers = locations.map(function (location, i) {
         return new google.maps.Marker({
             position: location,
             label: labels[i % labels.length]
         });
     });
-
     var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
 }
 
-// Modal Js //
-
-$(document).ready(function () {
-    $("#myModal").modal('show');
-});
-
-// Ranked Number 1 C&C location Lakeside //
-
-function myFunction1() {
-    $("#image-change img").removeClass("opaque");
-    $("#image-change img").eq(1).addClass("opaque");
+// Set Map from buttons //
+function setMap() { // function to change the map locations, name of location, coordinates and zoom value //
     var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: {
-            lat: 52.9277403958966, 
-            lng: -8.420661941089131
-        }
-    });
-
+        zoom: zoomSize,
+        center: { lat: latitude, lng: longitude }
+        });
+    var labels = name;
     var locations = [
-        { lat: 52.9277403958966, lng: -8.420661941089131 } // #1 //
+        { lat: latitude, lng: longitude }
     ];
-
     var markers = locations.map(function (location, i) {
         return new google.maps.Marker({
             position: location,
-            label: "Lakeside C&C Park"
+            label: labels
         });
     });
-
     var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
-
-    var elem = document.getElementById("change-text");
-    elem.classList.remove('show_yourself');
-    elem.classList.add('hide');
-    elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Lakeside Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000);
-
-    var text = document.getElementById("change-text2");
-    text.classList.remove('show_yourself');
-    text.classList.add('hide');
-    text.classList.add('hide1');
-    setTimeout(() => { text.innerHTML = lakeside; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
-    
-    setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
-
-    var image = document.getElementById("weather1");
-    image.setAttribute("href", limerickWeather1);
-
-    var link = document.getElementById("weather2");
-    link.setAttribute("src", limerickWeather2);
 }
 
-// Ranked Number 2 C&C location Glen of Aherlow //
-
-function myFunction2() {
-    $("#image-change img").removeClass("opaque");
-    $("#image-change img").eq(2).addClass("opaque");
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: {
-            lat: 52.419866625338784, 
-            lng: -8.187759105906318
-        }
-    });
-
-    var locations = [
-        { lat: 52.419866625338784, lng: -8.187759105906318 }, // #2 //
-    ];
-
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: "Glen of Aherlow C&C Park"
-        });
-    });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
-    
-    var elem = document.getElementById("change-text");
-    elem.classList.remove('show_yourself');
-    elem.classList.add('hide');
-    elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "The Glen of Aherlow Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000);
-    
-    var text = document.getElementById("change-text2");
-    text.classList.remove('show_yourself');
-    text.classList.add('hide');
-    text.classList.add('hide1');
-    setTimeout(() => { text.innerHTML = glenaherlow; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
-    
-    setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
-    
-    var image = document.getElementById("weather1");
-    image.setAttribute("href", tippWeather1);
-
-    var link = document.getElementById("weather2");
-    link.setAttribute("src", tippWeather2);
+// Scroll back to top of page //
+function scrollTop() { // this function ensures that the person viewing the page is brought back to the top to see the image change //
+    setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 1 * 1000);
 }
 
-// Ranked Number 3 C&C location Goosey Island //
-
-function myFunction3() {
-    $("#image-change img").removeClass("opaque");
-    $("#image-change img").eq(3).addClass("opaque");
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: {
-            lat: 51.83744663817569, 
-            lng: -9.900147501388021
-        }
-    });
-
-    var locations = [
-        { lat: 51.83744663817569,  lng: -9.900147501388021 }, // #3 //
-    ];
-
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: "Goosey Island C&C Park"
-        });
-    });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
-
-    var elem = document.getElementById("change-text");
-    elem.classList.remove('show_yourself');
-    elem.classList.add('hide');
-    elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Goosey Isle Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000);
-    
-    var text = document.getElementById("change-text2");
-    text.classList.remove('show_yourself');
-    text.classList.add('hide');
-    text.classList.add('hide1');
-    setTimeout(() => { text.innerHTML = goosey; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
-    
-    setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
-        
-    var image = document.getElementById("weather1");
-    image.setAttribute("href", kerryWeather1);
-
-    var link = document.getElementById("weather2");
-    link.setAttribute("src", kerryWeather2);
+// Change Hero Image with JS//
+function changeHeroImage() { // function to change the background image at the top of the page //
+    var fadeTarget = document.getElementById("heroImage"); // find the image by id //
+    var fadeOutEffect = setInterval(function () {
+        fadeTarget.style.opacity -= 0.1;
+    }, 200); // setting fade out parameters (opacity/time) //
+    setTimeout(() => {
+        var fadeInEffect = setInterval(function () { // setting a wait duration after fade out of initial image before changing to another image //
+            fadeTarget.src = newHeroImage;
+            fadeTarget.style.opacity = 1;
+        }, 200);
+    }, 1 * 1000);  // bringing opacity back to "1" after image change //
 }
 
-// Ranked Number 4 C&C location Wavecrest //
-
-function myFunction4() {
-    $("#image-change img").removeClass("opaque");
-    $("#image-change img").eq(4).addClass("opaque");
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: {
-            lat: 51.758844440963365, 
-            lng: -10.091116730629471
-        }
-    });
-
-    var locations = [
-        { lat: 51.758844440963365, lng: -10.091116730629471 }, // #4 //
-    ];
-
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: "Wave Crest C&C Park"
-        });
-    });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
-    
-    var elem = document.getElementById("change-text");
-    elem.classList.remove('show_yourself');
-    elem.classList.add('hide');
-    elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Wavecrest Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000);
-    
-    var text = document.getElementById("change-text2");
-    text.classList.remove('show_yourself');
-    text.classList.add('hide');
-    text.classList.add('hide1');
-    setTimeout(() => { text.innerHTML = wavecrest; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
-    
-    setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
-    
+// Weather set with JS //
+function weatherSet() { // changing the weather status and location based on location //
     var image = document.getElementById("weather1");
-    image.setAttribute("href", kerryWeather1);
-
+    image.setAttribute("href", newWeather1); // changing the name and weather locality //
     var link = document.getElementById("weather2");
-    link.setAttribute("src", kerryWeather2);
+    link.setAttribute("src", newWeather2); // changing the images to suite the weather locality //
 }
 
-// Ranked Number 5 C&C location Knockalla //
+// Change Hero Image text //
+function changeHeroImageText() {
+    var heroText = document.getElementById("change-text"); // getting the header by id //
+    heroText.classList.remove('show_yourself'); // removing the show yourself class //
+    heroText.classList.add('hide'); // hiding the header element with opacity transition //
+    heroText.classList.add('hide1'); // adding the opacity 0 !important //
+    setTimeout(() => { heroText.innerHTML = name; heroText.classList.remove('hide1'); heroText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
+}
 
-function myFunction5() {
-    $("#image-change img").removeClass("opaque");
-    $("#image-change img").eq(5).addClass("opaque");
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
-        center: {
-            lat: 55.18304735750677, 
-            lng: -7.61241954377543
-        }
-    });
+// Change About Text //
+function changeAboutText() {
+    var newText = document.getElementById("change-text2"); // getting the about us text by id //
+    newText.classList.remove('show_yourself'); // removing the show yourself class //
+    newText.classList.add('hide'); // hiding the about us text with opacity transition //
+    newText.classList.add('hide1'); // adding the opacity 0 !important //
+    setTimeout(() => { newText.innerHTML = newAboutTxt; newText.classList.remove('hide1'); newText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
+}
 
-    var locations = [
-        { lat: 55.18304735750677, lng: -7.61241954377543 } // #5 //
-    ];
-
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: "Knockalla C&C Park"
-        });
-    });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
-
-    var elem = document.getElementById("change-text");
-    elem.classList.remove('show_yourself');
-    elem.classList.add('hide');
-    elem.classList.add('hide1');
-    setTimeout(() => { elem.innerHTML = "Knockalla Caravan & Camping"; elem.classList.remove('hide1'); elem.classList.add('show_yourself');}, 1 * 1000);
-    
-    var text = document.getElementById("change-text2");
-    text.classList.remove('show_yourself');
-    text.classList.add('hide');
-    text.classList.add('hide1');
-    setTimeout(() => { text.innerHTML = knockalla; text.classList.remove('hide1'); text.classList.add('show_yourself');}, 1 * 1000);
-    
-    setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'});},1 * 800);
-    
-    var image = document.getElementById("weather1");
-    image.setAttribute("href", donegalWeather1);
-
-    var link = document.getElementById("weather2");
-    link.setAttribute("src", donegalWeather2);
+function executeAll() { // executing all functions required to update the page with respect to the button pressed //
+    scrollTop(); // scrolling back to the top //
+    setMap(); // setting the Map //
+    changeHeroImage(); // changing the hero image //
+    weatherSet(); // setting the weather depending on the new location //
+    changeHeroImageText(); // changing the hero image text //
+    changeAboutText(); // changing the about us text //
 }

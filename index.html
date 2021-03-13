@@ -6,15 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VW Choice Camping</title>
-
-    <!-- Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
     <!-- Bootstrap Stylesheet Links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,7 +21,6 @@
         type="text/css" />
     <!-- My Local css Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- My Local js Scripts -->
 </head>
 
 <body>
@@ -63,12 +53,12 @@
         <div class="row">
             <div class="shadow">
                 <section class="text-center" id="image-change">
-                    <img class="background_image opaque" src="assets/images/VWCC1.jpg" alt="VW_Camper" />
-                    <img class="background_image_ab" src="assets/images/lakeside.jpg" alt="lakeside" />
+                    <img class="background_image opaque" id="heroImage" src="assets/images/VWCC1.jpg" alt="VW_Camper" />
+                   <!--  <img class="background_image_ab" src="assets/images/lakeside.jpg" alt="lakeside" />
                     <img class="background_image_ab" src="assets/images/glenaherlow.jpg" alt="Glen of Aherlow" />
                     <img class="background_image_ab" src="assets/images/goosey.jpg" alt="Goosey Island" />
                     <img class="background_image_ab" src="assets/images/wavecrest.jpg" alt="Glen of Aherlow" />
-                    <img class="background_image_ab" src="assets/images/knockalla.jpg" alt="lakeside" />
+                    <img class="background_image_ab" src="assets/images/knockalla.jpg" alt="lakeside" />  -->
                     <h1 class="jumbotron-header fade-in-2sec" id="change-text">Volkswagon Choice Camping</h1>
                 </section>
             </div>
@@ -82,7 +72,8 @@
             <p class="about-body1" id="change-text2">VWCC offers 5 of Irelands finest campsites.
                 Each with its own unique characteristics and atmosphere. Locally,
                 there’s a large range of restaurants too. These locations offer large and luxurious mobile homes or,
-                arrive in your own campervan. VWCC have been helping create holiday dreams for the outdoors and adventurous types since 2008.
+                arrive in your own campervan. VWCC have been helping create holiday dreams for the outdoors and
+                adventurous types since 2008.
             </p>
             <p class="about-body2">Click on any of the buttons below to view campsite details!
             </p>
@@ -97,13 +88,13 @@
             <div>
                 <section>
                     <div class="row btn-top btn-bottom">
-                        <button type="button" class="btn btn-info" onclick="myFunction1()">Lakeside C&C Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction2()">Glen of Aherlow C&C
+                        <button type="button" class="btn btn-info" id="button1" onclick="initMod(1)">Lakeside C&C Park</button>
+                        <button type="button" class="btn btn-info" id="button2" onclick="initMod(2)">Glen of Aherlow C&C
                             Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction3()">Goosey Island C&C
+                        <button type="button" class="btn btn-info" id="button3" onclick="initMod(3)">Goosey Island C&C
                             Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction4()">Wave Crest C&C Park</button>
-                        <button type="button" class="btn btn-info" onclick="myFunction5()">Knockalla C&C Park</button>
+                        <button type="button" class="btn btn-info" id="button4" onclick="initMod(4)">Wave Crest C&C Park</button>
+                        <button type="button" class="btn btn-info" id="button5" onclick="initMod(5)">Knockalla C&C Park</button>
                     </div>
                 </section>
             </div>
@@ -139,12 +130,13 @@
             <div class="col-sm-5 middle_column">
                 <!-- About Us  -->
                 <h5 class="uppercase general-sub">Volkswagon Choice Camping Club</h5>
-                <p class="inline-block">Be a member of the Volkswagon Choice Camping Club and receive discounts entering any of the top 5 campsites in Ireland.
-                    Click on the link and be in with a chance to win weekend stay vouchers on a monthly basis. 
+                <p class="inline-block">Be a member of the Volkswagon Choice Camping Club and receive discounts entering
+                    any of the top 5 campsites in Ireland.
+                    Click on the link and be in with a chance to win weekend stay vouchers on a monthly basis.
                     <!-- Lorem Ipsum -->
-                    <a href="index.html" class="joinclub">
-                        <i class="fas fa-file-signature" aria-hidden="true"></i>
-                        <span class="sr-only">VWCC-Club</span>
+                    <a class="joinclub">
+                        <i class="fas fa-file-signature" aria-hidden="true" onclick="showModal()"></i>
+                        <span class="sr-only">VWCC-Club-Join</span>
                     </a>
                 </p>
             </div>
@@ -206,7 +198,8 @@
                             aria-hidden="true"><span>&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <p>Join our club by signing up to receive our weekly newsletter, enter draws and get the latest package deals available at Irelands top 5
+                        <p>Join our club by signing up to receive our weekly newsletter, enter draws and get the latest
+                            package deals available at Irelands top 5
                             campsites.</p>
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Enter your email" required>
@@ -220,12 +213,18 @@
         </div>
     </div>
     <!--Modal End-->
+    <!-- Javascripts Start -->
     <script
         src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCaHrvOepUJ2ZmtfifaAgpQegx5TkU7AoU&callback=initMap"
         type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
     <script src="assets/js/scripts.js"></script>
+    <!-- Javascripts End -->
 </body>
 
 </html>
