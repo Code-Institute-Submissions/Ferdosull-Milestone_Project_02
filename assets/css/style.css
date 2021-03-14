@@ -23,7 +23,7 @@ body { /* ----New-VWCC--- */
 }
 
 .about-body1 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-family: 'Voltaire', sans-serif;
     font-size: 1.2rem;
     letter-spacing: .03rem;
@@ -60,7 +60,7 @@ body { /* ----New-VWCC--- */
 
 .navalert-container { /* ----New-VWCC--- */
 	font-family: 'Prompt', sans-serif;
-    position: fixed;
+    /* position: fixed; to be added back in for mobile device in media query */
     top: 0;
     left: 0px;
     right: 0px;
@@ -117,6 +117,10 @@ body { /* ----New-VWCC--- */
     background-color:#23395d;
 }
 
+.aboutpoint:hover {
+ cursor:pointer;
+}
+
 /* --------------------------------------------------------------Image & Text Fades*/
 
 #image-change img.opaque {
@@ -168,7 +172,7 @@ body { /* ----New-VWCC--- */
 	width: 100%;
 	padding-left: 10%;
     padding-right: 10%;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 40px;
     background-color: #f0f0f0;
     position:relative;
@@ -207,18 +211,18 @@ body { /* ----New-VWCC--- */
 /* ----------------------------------------------------------------------Headings */
 
 .jumbotron-header { /* ----New-VWCC--- */
-    color: #fbfcff;
-	text-shadow:2px 0 0 #03ac13,0 2px 0 #03ac13,2px 0 0 #03ac13,0 2px 0 #03ac13;
+    color: #1c6e8c;
+	text-shadow:2px 0 0 #A0A0A0,0 2px 0 #A0A0A0,2px 0 0 #A0A0A0,0 2px 0 #A0A0A0;
 	font-family: 'Prompt', sans-serif;
     font-weight: bold;
 	font-size: 3.5vw;
 	letter-spacing: 3px;
-    margin-bottom: 50px;
-    margin-top: 4.2rem;
-	margin-right: 2%;
-	position: absolute;
-	top: 8px;
-	right: 10%;
+    margin-top: 1.5rem;
+	position: relative;
+}
+
+.centertext {
+    text-align: center;
 }
 
 /* ------------------------------------------------Header Text Transition Fade-In */

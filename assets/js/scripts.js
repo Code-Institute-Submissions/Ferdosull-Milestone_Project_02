@@ -1,9 +1,11 @@
 // Modal Js //
-$(document).ready(showModal()); // automatic loading once landed at the website and at refresh
 
 function showModal() { // modal loaded from the icon in the footer //
     $("#myModal").modal('show');
 }
+
+showModal(); // automatic loading once landed at the website and at refresh //
+
 
 // Declared Global const campsite object //
 const campsites = {
@@ -14,7 +16,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/dublin-18082', 'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/VWCC1.jpg',
-        campsiteDetails: { dayrate: '', weekdayrate: '', weekendrate: '', capacity: '', advannot: '' }
+        campsiteDetails: ['', '', '', '', '' ]
     },
     lakeside: {
         name: 'Lakeside Caravan & Camping',
@@ -23,7 +25,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/limerick-18701', 'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/lakeside.jpg',
-        campsiteDetails: { dayrate: '€22 per night', weekdayrate: '€100 per week', weekendrate: '€50 Sat & Sun', capacity: '55 Pitches', advannot: '1 day' }
+        campsiteDetails: ['€22 per night', '€100 per week', '€50 Sat & Sun', '55 Pitches', '1 day']
     },
     glenaherlow: {
         name: 'Glen of Aherlow C&C Park',
@@ -32,7 +34,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/tipperary-26309', 'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/glenaherlow.jpg',
-        campsiteDetails: { dayrate: '€20 per night', weekdayrate: '€95 per week', weekendrate: '€50 Sat & Sun', capacity: '25 Pitches', advannot: '1 week' }
+        campsiteDetails: ['€20 per night', '€95 per week', '€50 Sat & Sun', '25 Pitches', '1 week']
     },
     goosey: {
         name: 'Goosey Island C&C Park',
@@ -41,7 +43,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/goosey.jpg',
-        campsiteDetails: { dayrate: '€16 per night', weekdayrate: '€75 per week', weekendrate: '€40 Sat & Sun', capacity: '12 Pitches', advannot: '1 week' }
+        campsiteDetails: ['€16 per night', '€75 per week', '€40 Sat & Sun', '12 Pitches', '1 week']
     },
     wavecrest: {
         name: 'Wave Crest C&C Park',
@@ -50,7 +52,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/wavecrest.jpg',
-        campsiteDetails: { dayrate: '€15 per night', weekdayrate: '€70 per week', weekendrate: '€40 Sat & Sun', capacity: '35 Pitches', advannot: '2 week' }
+        campsiteDetails: ['€15 per night', '€70 per week', '€40 Sat & Sun', '35 Pitches', '2 week']
     },
     knockalla: {
         name: 'Knockalla C&C Park',
@@ -59,7 +61,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/county-donegal-47201', 'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/knockalla.jpg',
-        campsiteDetails: { dayrate: '€18 per night', weekdayrate: '€85 per week', weekendrate: '€45 Sat & Sun', capacity: '22 Pitches', advannot: '1 day' }
+        campsiteDetails: ['€18 per night', '€85 per week', '€45 Sat & Sun', '22 Pitches', '1 day']
     },
 }
 
@@ -73,6 +75,7 @@ var newWeather1;
 var newWeather2;
 var newAboutTxt;
 var fadeEffect;
+var buttonIndex = 0;
 
 function initMod(buttonNum) { // using button clicks and respective numbers to update the function from the object //
     return (name = Object.keys(campsites).map((key) => campsites[key]['name'])[buttonNum],
@@ -82,8 +85,19 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
         newHeroImage = Object.keys(campsites).map((key) => campsites[key]['heroImageSrc'])[buttonNum],
         newWeather1 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][0],
         newWeather2 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][1],
-        newAboutTxt = Object.keys(campsites).map((key) => campsites[key]['description'])[buttonNum]),
+        newAboutTxt = Object.keys(campsites).map((key) => campsites[key]['description'])[buttonNum],
+        buttonIndex = (buttonNum)),
         executeAll();
+}
+
+// Map decide function //
+function mapDecide() {
+    console.log(buttonIndex);
+    if (buttonIndex == 0) {
+        initMap();
+    } else {
+        setMap();
+    }
 }
 
 // Initial Loading of the GoogleMaps API Visuals and locations //
@@ -139,9 +153,23 @@ function changeHeroImage() { // function to change the background image at the t
     setTimeout(() => { $('#image-change').removeClass("show_yourself")}, 1 * 1200);
 }
 
+// Scroll decide function //
+function scrollDecide() {
+    console.log(buttonIndex);
+    if (buttonIndex == 0) {
+        scrollToAbout();
+    } else {
+        scrollTop();
+    }
+}
 // Scroll back to top of page //
 function scrollTop() { // this function ensures that the person viewing the page is brought back to the top to see the image change //
     setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 1 * 1000);
+}
+
+// scroll to About Us Section //
+function scrollToAbout() {
+    setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({behavior: 'smooth'}); }, 1 * 1000);
 }
 
 // Weather set with JS //
@@ -170,10 +198,10 @@ function changeAboutText() {
     setTimeout(() => { newText.innerHTML = newAboutTxt; newText.classList.remove('hide1'); newText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
 }
 
-function executeAll() { // executing all functions required to update the page with respect to the button pressed //
-    setMap(); // setting the Map //
+function executeAll() { // executing all functions required to update the page with respect to the button being pressed //
+    mapDecide(); // setting the Map based on which button is pressed //
     changeHeroImage(); // changing the hero image //
-    scrollTop(); // scrolling back to the top //
+    scrollDecide(); // scrolling to a decided location based on which button is pressed //
     weatherSet(); // setting the weather depending on the new location //
     changeHeroImageText(); // changing the hero image text //
     changeAboutText(); // changing the about us text //

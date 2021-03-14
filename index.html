@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mr-auto">
                         <li class="active nav-item mr-2"><a class="nav-link" href="index.html">HOME</a></li>
-                        <li class="nav-item mr-2"><a class="nav-link" href="index.html">ABOUT</a></li>
+                        <li class="nav-item mr-2"><a class="nav-link aboutpoint" onclick="initMod(0)">ABOUT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -53,14 +53,15 @@
         <div class="row">
             <div class="shadow">
                 <section class="text-center" id="image-change">
-                    <img class="background_image opaque" id="heroImage" src="assets/images/VWCC1.jpg" alt="header-image"/>
-                    <h1 class="jumbotron-header fade-in-2sec" id="change-text">Volkswagon Choice Camping</h1>
+                    <img class="background_image opaque" id="heroImage" src="assets/images/VWCC1.jpg" alt="header-image"/>                   
                 </section>
             </div>
         </div>
     </div>
     <!-- End of Main Picture/Title Section-->
-
+    <div class="centertext" id="scroll1">
+        <h1 class="jumbotron-header fade-in-2sec" id="change-text">Volkswagon Choice Camping</h1>
+    </div> <!-- Scroll to location -->
     <!-- Start About Section -->
     <div class="write-up">
         <section>
@@ -130,7 +131,7 @@
                     Click on the link and be in with a chance to win weekend stay vouchers on a monthly basis.
                     <!-- Lorem Ipsum -->
                     <a class="joinclub">
-                        <i class="fas fa-file-signature" aria-hidden="true" onclick="fadeIn()"></i>
+                        <i class="fas fa-file-signature" aria-hidden="true" onclick="showModal()"></i>
                         <span class="sr-only">VWCC-Club-Join</span>
                     </a>
                 </p>
