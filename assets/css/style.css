@@ -228,7 +228,8 @@ body { /* ----New-VWCC--- */
 /* -----------------------------------------------------Site Specific Information */
 
 .sitespecific {
-    border: 0.2rem solid #1c6e8c;
+    border: 0.3rem double #1c6e8c;
+    border-radius: 1rem;
     position: relative;
     font-family: 'Voltaire', sans-serif;
     font-weight: bold;
@@ -248,8 +249,7 @@ body { /* ----New-VWCC--- */
     color: #1c6e8c;
 }
 
-.sitespecific span{
-    
+.sitespecific span{  
     text-align: left;
     font-size: 1.2rem;
     color: #03ac13
@@ -421,7 +421,6 @@ body { /* ----New-VWCC--- */
     
 .modal-newsletter {	
 	color: #999;
-	width: 625px;
 	font-size: 15px;
 	margin: 30px auto;
 }
@@ -633,43 +632,17 @@ div#map {
 /* ---------------------------------------------- -Media Query (Max-Width) 1400px */
 
 @media(max-width: 1400px) {
+    .right-column {
+        width: 50%;
+    }
 }
 
 /* ------------------------------------------------Media Query (Max-Width) 1370px */
 
 @media(max-width: 1370px) {
-}
-
-
-/* ---------------------Media Query (Larger than IPAD Landscape Min-Width) 1030px */
-/* Hovers and overlays work as normal until 1030px resolution is exceeded */
-
-@media(min-width: 1030px) {
-    .social-links li a i:hover {
-        background: lightgrey;
-        color: #01161E;
+    .right-column {
+        width: 50%;
     }
-}
-
-/* ---------------------Media Query (Smaller than IPAD Landscape Max-Width) 1030px */
-/* Gallery & We Need You Section Pics have constant text with opaque background */
-
-@media(max-width: 1030px) {
-	.vw-logo { /* ----New-VWCC--- */
-	width: 2.7rem;
-	}
-	.navbar-brand { /* ----New-VWCC--- */
-	border-radius: 1.5rem;
-	border-width: 0.18rem;
-	padding-top: 0.1rem;
-	padding-bottom: 0.1rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-    font-weight: bold;
-	font-size: 1.2rem;
-	margin-left: 10px;
-	color: #fbfcff;
-	}
 }
 
 /* ------------------------------------------------Media Query (Max-Width) 1280px */
@@ -678,22 +651,106 @@ div#map {
     .list-inline-item:not(:last-child) {
 		margin-bottom: .5rem;
     }
+    .right-column {
+        width: 50%;
+    }
+    .jumbotron-header { /* ----New-VWCC--- */
+        font-size: 4.0vw;
+    }
 }
 
+/* ---------------------Media Query (Larger than IPAD Landscape Min-Width) 1030px */
+/* Hovers and overlays work as normal until 1030px resolution is exceeded */
 
-/* -------------------------------------------------Media Query 992px (min-width) */
 
-@media(min-width: 992px) {  
+
+/* ---------------------Media Query (Smaller than IPAD Landscape Max-Width) 1030px */
+/* Gallery & We Need You Section Pics have constant text with opaque background */
+
+@media(max-width: 1030px) {
+	.vw-logo { /* ----New-VWCC--- */
+	    width: 2.7rem;
+	}
+	.navbar-brand { /* ----New-VWCC--- */
+        border-radius: 1.5rem;
+        border-width: 0.18rem;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-left: 10px;
+        color: #fbfcff;
+    }
+    .jumbotron-header { /* ----New-VWCC--- */
+        font-size: 4.5vw;
+    }
+    div#map {
+        margin-left: 9.7rem;
+    }
+    .right-column {
+        width: 50%;
+        margin-left: 6.5rem;
+    }
+    .general-sub { /* ----New-VWCC--- */
+        font-size: 18px;
+    }
+    .right_column {
+        padding-left: 20px;
+    }
+    .middle_column {
+        padding-right: 20px;
+    }
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 992px */
 
 @media(max-width: 992px) {
+    .right-column {
+        width: 70%;
+    }
+}
+
+@media(max-width: 900px) {
+    .right-column {
+        width: 70%;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .sitespecific h2{
+        font-size: 1.5rem;
+    }
+    div#map {
+        margin-left: 4.1rem;
+    }
+    .right-column {
+        width: 70%;
+        margin-left: 5.0rem;
+    }
+    .middle_column { /* ----New-VWCC--- */
+        padding-top: 35px;
+        padding-right: 100px;
+    }
+    .right_column {
+        padding-top: 25px;
+    }
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 670px */
 
 @media(max-width: 670px) {
+    .right-column {
+        width: 70%;
+    }
+    .jumbotron-header { /* ----New-VWCC--- */
+        font-size: 5.5vw;
+    }
+    .sitespecific h2{
+        font-size: 1.5rem;
+    }
 }
 
 /* ----------------------------------------------- -Media Query (Max-Width) 500px */
@@ -701,11 +758,17 @@ div#map {
 @media(max-width: 500px) {
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
+    }
+    .right-column {
+        width: 70%;
     }	
 }
 /* -------------------------------------------------Media Query (Max-Width) 365px */
 
-@media(max-width: 365px) {	
+@media(max-width: 365px) {
+    .right-column {
+        width: 100%;
+    }	
 }
 
 /* -------------------------------------------------Media Query (Max-Height) 420px */
@@ -713,5 +776,8 @@ div#map {
 @media(max-height: 420px) {
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
+    }
+    .right-column {
+        width: 100%;
     }
 }

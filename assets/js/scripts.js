@@ -88,14 +88,14 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
 }
 
 // Map and Scroll direction decide function //
+
 function mapScrollDecide() {
     console.log(buttonIndex);
     if (buttonIndex == 0) {
         initMap(),
             scrollToAbout();
     } else {
-        setMap(),
-            scrollTop();
+        setMap();
     }
 }
 
