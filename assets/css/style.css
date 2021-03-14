@@ -228,30 +228,52 @@ body { /* ----New-VWCC--- */
 /* -----------------------------------------------------Site Specific Information */
 
 .sitespecific {
+    border: 0.2rem solid #1c6e8c;
     position: relative;
     font-family: 'Voltaire', sans-serif;
     font-weight: bold;
-    color: #1c6e8c;
-    padding: 0;
+    margin-left: 1rem;
+    margin-top: 2rem;
 }
 
 .sitespecific h2{
     text-align: center;
+    color: #1c6e8c;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
 }
 
 .sitespecific p{
     text-align: left;
+    color: #1c6e8c;
+}
+
+.sitespecific span{
+    
+    text-align: left;
+    font-size: 1.2rem;
+    color: #03ac13
+}
+
+.space {
+    padding-left: 0.5rem;
+}
+
+.column {
+    float: left;
 }
 
 .left-column {
     display: inline-block;
-    width: 40%;
+    width: 50%;
 }
 
 .right-column {
     display: inline-block;
-    padding: 3rem;
-    width: 60%;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    width: 50%;
 }
 
 /* ------------------------------------------------Header Text Transition Fade-In */
@@ -594,10 +616,11 @@ footer { /* ----New-VWCC--- */
 
 /*--------------------------------------------Map*/
 div#map {
-    height: 34rem;
+    height: 21.7rem;
     width: 24rem;
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
     padding: 0;
 }
 

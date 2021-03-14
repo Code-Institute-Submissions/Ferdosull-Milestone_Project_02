@@ -16,7 +16,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/dublin-18082', 'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/VWCC1.jpg',
-        campsiteDetails: ['', '', '', '', '' ]
+        campsiteDetails: ['', '', '', '', '']
     },
     lakeside: {
         name: 'Lakeside Caravan & Camping',
@@ -25,7 +25,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/limerick-18701', 'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/lakeside.jpg',
-        campsiteDetails: ['€22 per night', '€100 per week', '€50 Sat & Sun', '55 Pitches', '1 day']
+        campsiteDetails: ['22', '100', '50', '55', '1']
     },
     glenaherlow: {
         name: 'Glen of Aherlow C&C Park',
@@ -34,7 +34,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/tipperary-26309', 'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/glenaherlow.jpg',
-        campsiteDetails: ['€20 per night', '€95 per week', '€50 Sat & Sun', '25 Pitches', '1 week']
+        campsiteDetails: ['20', '95', '50', '25', '5']
     },
     goosey: {
         name: 'Goosey Island C&C Park',
@@ -43,7 +43,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/goosey.jpg',
-        campsiteDetails: ['€16 per night', '€75 per week', '€40 Sat & Sun', '12 Pitches', '1 week']
+        campsiteDetails: ['16', '75', '40', '12', '5']
     },
     wavecrest: {
         name: 'Wave Crest C&C Park',
@@ -52,7 +52,7 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/wavecrest.jpg',
-        campsiteDetails: ['€15 per night', '€70 per week', '€40 Sat & Sun', '35 Pitches', '2 week']
+        campsiteDetails: ['15', '70', '40', '35', '10']
     },
     knockalla: {
         name: 'Knockalla C&C Park',
@@ -61,21 +61,13 @@ const campsites = {
         zoom: 10,
         weatherUrls: ['https://www.booked.net/weather/county-donegal-47201', 'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
         heroImageSrc: 'assets/images/knockalla.jpg',
-        campsiteDetails: ['€18 per night', '€85 per week', '€45 Sat & Sun', '22 Pitches', '1 day']
+        campsiteDetails: ['18', '85', '45', '22', '1']
     },
 }
 
 // Declaring "null" ariables to be updated on button clicks //
-var name;
-var latitude;
-var longitude;
-var zoomSize;
-var newHeroImage;
-var newWeather1;
-var newWeather2;
-var newAboutTxt;
-var fadeEffect;
-var buttonIndex = 0;
+var name; var latitude; var longitude; var zoomSize; var newHeroImage; var newWeather1; var newWeather2; var newAboutTxt;
+var fadeEffect; var buttonIndex = 0; var dayRateP; var weekRateP; var weekendRateP; var pitchQuantity; var advancedNotice;
 
 function initMod(buttonNum) { // using button clicks and respective numbers to update the function from the object //
     return (name = Object.keys(campsites).map((key) => campsites[key]['name'])[buttonNum],
@@ -86,6 +78,11 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
         newWeather1 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][0],
         newWeather2 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][1],
         newAboutTxt = Object.keys(campsites).map((key) => campsites[key]['description'])[buttonNum],
+        dayRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][0],
+        weekRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][1],
+        weekendRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][2],
+        pitchQuantity = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][3],
+        advancedNotice = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][4],
         buttonIndex = (buttonNum)),
         executeAll();
 }
@@ -94,18 +91,18 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
 function mapScrollDecide() {
     console.log(buttonIndex);
     if (buttonIndex == 0) {
-        initMap(), 
-        scrollToAbout();
+        initMap(),
+            scrollToAbout();
     } else {
         setMap(),
-        scrollTop();
+            scrollTop();
     }
 }
 
 // Initial Loading of the GoogleMaps API Visuals and locations //
 function initMap() {
     var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 6.7,
+        zoom: 6.0,
         center: { lat: 53.42830696507892, lng: -7.939229895133652 }
     });
     var labels = "ABCDE";
@@ -130,7 +127,7 @@ function setMap() { // function to change the map locations, name of location, c
     var map = new google.maps.Map(document.getElementById("map"), {
         zoom: zoomSize,
         center: { lat: latitude, lng: longitude }
-        });
+    });
     var labels = name;
     var locations = [
         { lat: latitude, lng: longitude }
@@ -149,10 +146,10 @@ function changeHeroImage() { // function to change the background image at the t
     var heroDiv = document.getElementById("image-change"); // find the image by id //
     var heroImage = document.getElementById("heroImage");
     $('#image-change').addClass("hide")
-    setTimeout(() => { $('#image-change').addClass("hide1")}, 1 * 450);
+    setTimeout(() => { $('#image-change').addClass("hide1") }, 1 * 450);
     setTimeout(() => { heroImage.src = newHeroImage }, 1 * 580);
-    setTimeout(() => { $('#image-change').removeClass("hide"), $('#image-change').removeClass("hide1"), $('#image-change').addClass("show_yourself")}, 1 * 650);
-    setTimeout(() => { $('#image-change').removeClass("show_yourself")}, 1 * 1200);
+    setTimeout(() => { $('#image-change').removeClass("hide"), $('#image-change').removeClass("hide1"), $('#image-change').addClass("show_yourself") }, 1 * 650);
+    setTimeout(() => { $('#image-change').removeClass("show_yourself") }, 1 * 1200);
 }
 
 // Scroll back to top of page //
@@ -162,7 +159,7 @@ function scrollTop() { // this function ensures that the person viewing the page
 
 // scroll to About Us Section //
 function scrollToAbout() {
-    setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({behavior: 'smooth'}); }, 1 * 1000);
+    setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({ behavior: 'smooth' }); }, 1 * 1000);
 }
 
 // Weather set with JS //
@@ -191,10 +188,25 @@ function changeAboutText() {
     setTimeout(() => { newText.innerHTML = newAboutTxt; newText.classList.remove('hide1'); newText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
 }
 
+// Change Site Specific Info text //
+function changeSSInfoText(a, b) {
+    var heroText = document.getElementById(a); // getting the header by id //
+    //heroText.classList.remove('show_yourself'); // removing the show yourself class //
+    //heroText.classList.add('hide'); // hiding the header element with opacity transition //
+    //heroText.classList.add('hide1'); // adding the opacity 0 !important //
+    //setTimeout(() => { heroText.innerHTML = b; heroText.classList.remove('hide1'); heroText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
+    heroText.innerHTML = b;
+}
+
 function executeAll() { // executing all functions required to update the page with respect to the button being pressed //
     changeHeroImage(); // changing the hero image //
     mapScrollDecide(); // setting the Map and Scroll direction based on which button is pressed //
     weatherSet(); // setting the weather depending on the new location //
     changeHeroImageText(); // changing the hero image text //
     changeAboutText(); // changing the about us text //
+    changeSSInfoText('dayRates', dayRateP);
+    changeSSInfoText('wkndRates', weekRateP);
+    changeSSInfoText('weekRates', weekendRateP);
+    changeSSInfoText('pQuant', pitchQuantity);
+    changeSSInfoText('avanNotP', advancedNotice);
 }
