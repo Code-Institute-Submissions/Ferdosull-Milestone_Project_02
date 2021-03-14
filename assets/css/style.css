@@ -225,6 +225,35 @@ body { /* ----New-VWCC--- */
     text-align: center;
 }
 
+/* -----------------------------------------------------Site Specific Information */
+
+.sitespecific {
+    position: relative;
+    font-family: 'Voltaire', sans-serif;
+    font-weight: bold;
+    color: #1c6e8c;
+    padding: 0;
+}
+
+.sitespecific h2{
+    text-align: center;
+}
+
+.sitespecific p{
+    text-align: left;
+}
+
+.left-column {
+    display: inline-block;
+    width: 40%;
+}
+
+.right-column {
+    display: inline-block;
+    padding: 3rem;
+    width: 60%;
+}
+
 /* ------------------------------------------------Header Text Transition Fade-In */
 
 .fade-in-2sec {
@@ -569,6 +598,7 @@ div#map {
     width: 24rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    padding: 0;
 }
 
 /* -------------------------------------------------Start of the Media Queries--- */

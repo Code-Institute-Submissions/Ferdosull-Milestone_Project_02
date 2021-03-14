@@ -90,13 +90,15 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
         executeAll();
 }
 
-// Map decide function //
-function mapDecide() {
+// Map and Scroll direction decide function //
+function mapScrollDecide() {
     console.log(buttonIndex);
     if (buttonIndex == 0) {
-        initMap();
+        initMap(), 
+        scrollToAbout();
     } else {
-        setMap();
+        setMap(),
+        scrollTop();
     }
 }
 
@@ -153,15 +155,6 @@ function changeHeroImage() { // function to change the background image at the t
     setTimeout(() => { $('#image-change').removeClass("show_yourself")}, 1 * 1200);
 }
 
-// Scroll decide function //
-function scrollDecide() {
-    console.log(buttonIndex);
-    if (buttonIndex == 0) {
-        scrollToAbout();
-    } else {
-        scrollTop();
-    }
-}
 // Scroll back to top of page //
 function scrollTop() { // this function ensures that the person viewing the page is brought back to the top to see the image change //
     setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 1 * 1000);
@@ -199,9 +192,8 @@ function changeAboutText() {
 }
 
 function executeAll() { // executing all functions required to update the page with respect to the button being pressed //
-    mapDecide(); // setting the Map based on which button is pressed //
     changeHeroImage(); // changing the hero image //
-    scrollDecide(); // scrolling to a decided location based on which button is pressed //
+    mapScrollDecide(); // setting the Map and Scroll direction based on which button is pressed //
     weatherSet(); // setting the weather depending on the new location //
     changeHeroImageText(); // changing the hero image text //
     changeAboutText(); // changing the about us text //

@@ -53,7 +53,8 @@
         <div class="row">
             <div class="shadow">
                 <section class="text-center" id="image-change">
-                    <img class="background_image opaque" id="heroImage" src="assets/images/VWCC1.jpg" alt="header-image"/>                   
+                    <img class="background_image opaque" id="heroImage" src="assets/images/VWCC1.jpg"
+                        alt="header-image" />
                 </section>
             </div>
         </div>
@@ -71,7 +72,7 @@
                 arrive in your own campervan. VWCC have been helping create holiday dreams for the outdoors and
                 adventurous types since 2008.
             </p>
-            <p class="about-body2">Click on any of the buttons below to view campsite details!
+            <p class="about-body2 centertext">Click on any of the buttons below to view campsite details!
             </p>
         </section>
     </div>
@@ -84,13 +85,16 @@
             <div>
                 <section>
                     <div class="row btn-top btn-bottom">
-                        <button type="button" class="btn btn-info" id="button1" onclick="initMod(1)">Lakeside C&C Park</button>
+                        <button type="button" class="btn btn-info" id="button1" onclick="initMod(1)">Lakeside C&C
+                            Park</button>
                         <button type="button" class="btn btn-info" id="button2" onclick="initMod(2)">Glen of Aherlow C&C
                             Park</button>
                         <button type="button" class="btn btn-info" id="button3" onclick="initMod(3)">Goosey Island C&C
                             Park</button>
-                        <button type="button" class="btn btn-info" id="button4" onclick="initMod(4)">Wave Crest C&C Park</button>
-                        <button type="button" class="btn btn-info" id="button5" onclick="initMod(5)">Knockalla C&C Park</button>
+                        <button type="button" class="btn btn-info" id="button4" onclick="initMod(4)">Wave Crest C&C
+                            Park</button>
+                        <button type="button" class="btn btn-info" id="button5" onclick="initMod(5)">Knockalla C&C
+                            Park</button>
                     </div>
                 </section>
             </div>
@@ -102,11 +106,19 @@
     <div class="container">
         <div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 centertext">
                     <h3 class="uppercase blue-text" id="heading">Top 5 VW Owners Campsites in Ireland</h3>
+                    <div class="left-column" id="map"></div>
+                    <div class="sitespecific right-column">
+                        <h2 id="sitename">Ferdia</h2>
+                        <p>Day Stay Rates: <span id="dayRates"></span></p>
+                        <p>Weekend Stay Rates: <span id="wkndRates"></span></p>
+                        <p>Weekly Stay Rates: <span id="weekRates"></span></p>
+                        <p>Pitches at Site: <span id="pQuant"></span></p>
+                        <p>Advanced Notice Period: <span id="avanNotP"></span></p>
+                    </div>
                 </div>
             </div>
-            <div id="map"></div>
         </div>
     </div>
     <!-- End of Google Maps API-->
