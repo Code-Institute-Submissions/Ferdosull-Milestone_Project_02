@@ -95,7 +95,8 @@ function mapScrollDecide() {
         initMap(),
             scrollToAbout();
     } else {
-        setMap();
+        setMap(),
+            scrollToAbout();
     }
 }
 
@@ -153,13 +154,13 @@ function changeHeroImage() { // function to change the background image at the t
 }
 
 // Scroll back to top of page //
-function scrollTop() { // this function ensures that the person viewing the page is brought back to the top to see the image change //
-    setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 1 * 1000);
+function scroll2Price() { // this function ensures that the person viewing the page is brought back to the top to see the image change //
+    setTimeout(() => { document.querySelector('#sitename').scrollIntoView({ behavior: 'smooth' }); }, 1 * 800);
 }
 
 // scroll to About Us Section //
 function scrollToAbout() {
-    setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({ behavior: 'smooth' }); }, 1 * 1000);
+    setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({ behavior: 'smooth' }); }, 1 * 800);
 }
 
 // Weather set with JS //

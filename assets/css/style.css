@@ -60,13 +60,13 @@ body { /* ----New-VWCC--- */
 
 .navalert-container { /* ----New-VWCC--- */
 	font-family: 'Prompt', sans-serif;
-    /* position: fixed; to be added back in for mobile device in media query */
+    /* position: fixed; /*to be added back in for mobile device in media query */
     top: 0;
     left: 0px;
     right: 0px;
     padding-left: 0;
     padding-right: 0;
-    z-index: 20;
+    z-index: 99;
 }
 
 .navbar { /* ----New-VWCC--- */
@@ -78,6 +78,13 @@ body { /* ----New-VWCC--- */
     width: 100%;
 	height: 4rem;
     background: #23395d;
+}
+
+.navbar-collapse {
+    border-radius: 5px;
+    padding-left: 10px;
+    opacity: 0.9;
+    z-index: 100;
 }
 
 .navbar-expand-md { /* ----New-VWCC--- */
@@ -157,6 +164,21 @@ body { /* ----New-VWCC--- */
 	background-color: #f0f0f0;
 }
 
+.infoCol {
+  color: #03ac13;
+  background-color: #1c6e8c;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+.infoCol:hover {
+  color: #f0f0f0;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 5px;
+
+}
 /* -------------------------------------------------------------------Colours used*/
 
 /* --------Rufous Red = #A72608 -- (changed to #E60023 as it is easier to see) -- */
@@ -233,6 +255,7 @@ body { /* ----New-VWCC--- */
     position: relative;
     font-family: 'Voltaire', sans-serif;
     font-weight: bold;
+    padding-left: 1rem;
     margin-left: 1rem;
     margin-top: 2rem;
 }
@@ -270,7 +293,6 @@ body { /* ----New-VWCC--- */
 
 .right-column {
     display: inline-block;
-    padding-left: 2rem;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     width: 50%;
@@ -744,12 +766,18 @@ div#map {
 @media(max-width: 670px) {
     .right-column {
         width: 70%;
+        margin-left: 0rem;
+        padding-left: 1rem;
     }
     .jumbotron-header { /* ----New-VWCC--- */
         font-size: 5.5vw;
     }
     .sitespecific h2{
         font-size: 1.5rem;
+    }
+    div#map {
+        height: 21.7rem;
+        width: 18rem;
     }
 }
 
@@ -760,7 +788,15 @@ div#map {
 		margin-right: .3rem;
     }
     .right-column {
-        width: 70%;
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .btn-info { 
+        width: 20rem;
+        height: 5rem;
+    }
+    div#map {
+        margin-left: 1rem;
     }	
 }
 /* -------------------------------------------------Media Query (Max-Width) 365px */
