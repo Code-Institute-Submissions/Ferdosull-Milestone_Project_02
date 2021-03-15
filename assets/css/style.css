@@ -183,6 +183,10 @@ body { /* ----New-VWCC--- */
   padding: 5px;
 
 }
+
+.display1 {
+    display: none;
+}
 /* -------------------------------------------------------------------Colours used*/
 
 /* --------Rufous Red = #A72608 -- (changed to #E60023 as it is easier to see) -- */
@@ -216,9 +220,8 @@ body { /* ----New-VWCC--- */
 	width: 100%;
 	padding-left: 10%;
     padding-right: 10%;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 40px;
-    background-color: #f0f0f0;
     position:absolute;
     left:0;
     -webkit-transition: opacity 1s ease-in-out;
@@ -721,6 +724,8 @@ div#map {
     }
     .jumbotron-header { /* ----New-VWCC--- */
         font-size: 4.5vw;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     div#map {
         margin-left: 9.7rem;
@@ -748,6 +753,7 @@ div#map {
 @media(max-width: 992px) {
     .right-column {
         width: 70%;
+        margin-left: 5.0rem;
     }
 }
 
@@ -780,6 +786,10 @@ div#map {
     .right_column {
         padding-top: 25px;
     }
+    .write-up {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 670px */
@@ -798,7 +808,7 @@ div#map {
     }
     div#map {
         height: 21.7rem;
-        width: 18rem;
+        width: 22rem;
     }
     .write-up {
         margin-left: 1rem;
@@ -814,7 +824,6 @@ div#map {
     }
     .right-column {
         width: 90%;
-        margin-left: 1rem;
     }
     .btn-info { 
         width: 20rem;
@@ -822,13 +831,14 @@ div#map {
     }
     div#map {
         margin-left: 1rem;
+        width: 18rem;
     }	
 }
 /* -------------------------------------------------Media Query (Max-Width) 365px */
 
 @media(max-width: 365px) {
     .right-column {
-        width: 100%;
+        width: 95%;
     }	
 }
 
@@ -839,6 +849,6 @@ div#map {
 		margin-right: .3rem;
     }
     .right-column {
-        width: 100%;
+        width: 95%;
     }
 }

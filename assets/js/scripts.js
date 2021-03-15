@@ -182,6 +182,8 @@ function changeHeroImageText() {
 
 // Change About Text //
 function changeAboutText() {
+    var addText = document.getElementById("moreInfo"); // getting the more info button by id //
+    addText.classList.remove('display1'); // removing the display1 class //
     var newText = document.getElementById("change-text2"); // getting the about us text by id //
     newText.classList.remove('show_yourself'); // removing the show yourself class //
     newText.classList.add('hide'); // hiding the about us text with opacity transition //
