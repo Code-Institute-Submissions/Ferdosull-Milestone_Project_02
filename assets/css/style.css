@@ -12,8 +12,8 @@
 }
 
 .write-up {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 body { /* ----New-VWCC--- */
@@ -159,14 +159,13 @@ body { /* ----New-VWCC--- */
 	margin-top: 1rem;
 }
 
-.btn-top { /* ----New-VWCC--- */
-    margin-left: 3rem;
-	background-color: #f0f0f0;
-}
-
 .btn-bottom { /* ----New-VWCC--- */
 	margin-bottom: 3rem;
 	background-color: #f0f0f0;
+}
+
+.btn-align { /* ----New-VWCC--- */
+    padding-left: 4rem;
 }
 
 .infoCol {
@@ -251,6 +250,16 @@ body { /* ----New-VWCC--- */
 .centertext {
     text-align: center;
 }
+
+.centertext2 {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.justifytext {
+    text-align: justify;
+}
+
 
 /* -----------------------------------------------------Site Specific Information */
 
@@ -729,6 +738,9 @@ div#map {
     .middle_column {
         padding-right: 20px;
     }
+    .btn-align { /* ----New-VWCC--- */
+        padding-left: 0.5rem;
+    }
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 992px */
@@ -742,6 +754,10 @@ div#map {
 @media(max-width: 900px) {
     .right-column {
         width: 70%;
+    }
+    .write-up {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
 
@@ -783,6 +799,10 @@ div#map {
     div#map {
         height: 21.7rem;
         width: 18rem;
+    }
+    .write-up {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
