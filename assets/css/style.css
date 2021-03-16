@@ -513,7 +513,7 @@ body { /* ----New-VWCC--- */
 
 .modal-newsletter .form-control, .modal-newsletter .btn {
 	min-height: 46px;
-	border-radius: 0;
+    border-radius: 4px;
 }
 .modal-newsletter .form-control {
 	box-shadow: none;
@@ -533,8 +533,7 @@ body { /* ----New-VWCC--- */
     line-height: normal;
 	padding: 6px 20px;
 	min-width: 150px;
-	margin-left: 6px !important;
-    border: none;
+    border-radius: 4px;
 }
 
 .modal-newsletter .btn:hover, .modal-newsletter .btn:focus {
@@ -552,6 +551,16 @@ body { /* ----New-VWCC--- */
 .hint-text {
 	margin: 100px auto;
 	text-align: center;
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.highlight {
+    color: #03ac13;
 }
 
 /* ------------------------------------------------------------------------Footer */
