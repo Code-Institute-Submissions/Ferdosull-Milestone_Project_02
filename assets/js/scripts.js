@@ -13,7 +13,7 @@ const campsites = {
         description: 'VWCC offers 5 of Irelands finest campsites. Each with its own unique characteristics and atmosphere. Locally, there’s a large range of restaurants too. These locations offer large and luxurious mobile homes or, arrive in your own campervan.',
         coordinates: [53.42830696507892, -7.939229895133652],
         zoom: 10,
-        weatherUrls: ['https://www.booked.net/weather/dublin-18082', 'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        Urls: ['https://www.booked.net/weather/dublin-18082', 'https://w.bookcdn.com/weather/picture/32_18082_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575', ''],
         heroImageSrc: 'assets/images/VWCC1.jpg',
         campsiteDetails: ['', '', '', '', '']
     },
@@ -22,7 +22,7 @@ const campsites = {
         description: 'Welcome to Lakeside where you will find a unique campsite on the shores of the beautiful Lough Derg. We welcome you to a place where one can escape the stresses and strains of everyday life. We are a large, nature orientated campsite set in the forest and open green spaces, there is something here for everyone.',
         coordinates: [52.9277403958966, -8.420661941089131],
         zoom: 10,
-        weatherUrls: ['https://www.booked.net/weather/limerick-18701', 'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        Urls: ['https://www.booked.net/weather/limerick-18701', 'https://w.bookcdn.com/weather/picture/32_18701_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575', 'https://www.lakesideireland.com/'],
         heroImageSrc: 'assets/images/lakeside.jpg',
         campsiteDetails: ['22', '100', '50', '55', '1']
     },
@@ -31,16 +31,16 @@ const campsites = {
         description: 'Spectacular scenery, top class amenities and a warm welcome await you here at The Glen of Aherlow Caravan & Camping Park. This Park is situated right in the heart of one of the most picturesque valleys in Ireland. Surrounded by woodland and farmland the Park offers a quiet and relaxing holiday in the countryside.',
         coordinates: [52.419866625338784, -8.187759105906318],
         zoom: 10,
-        weatherUrls: ['https://www.booked.net/weather/tipperary-26309', 'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        Urls: ['https://www.booked.net/weather/tipperary-26309', 'https://w.bookcdn.com/weather/picture/32_26309_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575', 'https://www.tipperarycamping.com/'],
         heroImageSrc: 'assets/images/glenaherlow.jpg',
         campsiteDetails: ['20', '95', '50', '25', '5']
     },
     goosey: {
         name: 'Goosey Island C&C Park',
-        description: 'Cast a line from the river bank, stroll to the local pubs and Cafes. Explore the Kerry Way and Sneems National Award Winning Sculpture Parks. All from this from Gossey Islands uniquely located Park in the heart of Irelands Tidiest Village (1987). Golf, Fishing, Tennis, Pitch & Putt and Hiking available locally.',
+        description: 'Cast a line from the river bank, stroll to the local pubs and Cafes. Explore the Kerry Way and Sneems National Award Winning Sculpture Parks. All from this from Goosey Islands uniquely located Park in the heart of Irelands Tidiest Village (1987). Golf, Fishing, Tennis, Pitch & Putt and Hiking available locally.',
         coordinates: [51.83744663817569, -9.900147501388021],
         zoom: 10,
-        weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        Urls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575', 'http://www.gokerry.ie/index.php?action=businesses&business_id=6424'],
         heroImageSrc: 'assets/images/goosey.jpg',
         campsiteDetails: ['16', '75', '40', '12', '5']
     },
@@ -49,7 +49,7 @@ const campsites = {
         description: 'Wave Crest caravan and camping site is a 4 star, friendly, informal and family-run camp site in Caherdaniel on the Ring of Kerry, Ireland. This picturesque waterfront site with unique panoramic sea views offers the perfect base for a relaxing camping holiday in Ireland with friendly and helpful staff.',
         coordinates: [51.758844440963365, -10.091116730629471],
         zoom: 10,
-        weatherUrls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        Urls: ['https://www.booked.net/weather/county-kerry-47139', 'https://w.bookcdn.com/weather/picture/32_47139_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575', 'https://www.wavecrestcamping.com/'],
         heroImageSrc: 'assets/images/wavecrest.jpg',
         campsiteDetails: ['15', '70', '40', '35', '10']
     },
@@ -58,14 +58,14 @@ const campsites = {
         description: 'Nestled between the slopes of the Knockalla Mountains and the golden sands of Ballymastocker Bay in Portsalon, Co. Donegal, Knockalla Caravan & Camping Park is the perfect location to escape to. Soak up the stunning Knockalla landscape and feel the sand beneath your feet. Donegal has so much to offer.',
         coordinates: [55.18304735750677, -7.61241954377543],
         zoom: 10,
-        weatherUrls: ['https://www.booked.net/weather/county-donegal-47201', 'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575'],
+        Urls: ['https://www.booked.net/weather/county-donegal-47201', 'https://w.bookcdn.com/weather/picture/32_47201_1_1_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=64575', 'https://knockallacaravanpark.com/'],
         heroImageSrc: 'assets/images/knockalla.jpg',
         campsiteDetails: ['18', '85', '45', '22', '1']
     },
 }
 
-// Declaring "null" ariables to be updated on button clicks //
-var name; var latitude; var longitude; var zoomSize; var newHeroImage; var newWeather1; var newWeather2; var newAboutTxt;
+// Declaring "null/undefined" ariables to be updated on button clicks //
+var name; var latitude; var longitude; var zoomSize; var newHeroImage; var newWeather1; var newWeather2; var campSiteLnk; var newAboutTxt;
 var fadeEffect; var buttonIndex = 0; var dayRateP; var weekRateP; var weekendRateP; var pitchQuantity; var advancedNotice;
 
 function initMod(buttonNum) { // using button clicks and respective numbers to update the function from the object //
@@ -74,8 +74,9 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
         longitude = Object.keys(campsites).map((key) => campsites[key]['coordinates'])[buttonNum][1],
         zoomSize = Object.keys(campsites).map((key) => campsites[key]['zoom'])[buttonNum],
         newHeroImage = Object.keys(campsites).map((key) => campsites[key]['heroImageSrc'])[buttonNum],
-        newWeather1 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][0],
-        newWeather2 = Object.keys(campsites).map((key) => campsites[key]['weatherUrls'])[buttonNum][1],
+        newWeather1 = Object.keys(campsites).map((key) => campsites[key]['Urls'])[buttonNum][0],
+        newWeather2 = Object.keys(campsites).map((key) => campsites[key]['Urls'])[buttonNum][1],
+        campSiteLnk = Object.keys(campsites).map((key) => campsites[key]['Urls'])[buttonNum][2],
         newAboutTxt = Object.keys(campsites).map((key) => campsites[key]['description'])[buttonNum],
         dayRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][0],
         weekRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][1],
@@ -84,6 +85,11 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
         advancedNotice = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][4],
         buttonIndex = (buttonNum)),
         executeAll();
+}
+
+// Get HREF from "Visit Our Site" button and change to suit the campsit location chosen //
+function changeHref() {
+    $("#changeHref").attr("href", campSiteLnk);
 }
 
 // Map and Scroll direction decide function //
@@ -197,6 +203,7 @@ function changeSSInfoText(a, b) {
 }
 
 function executeAll() { // executing all functions required to update the page with respect to the button being pressed //
+    changeHref(); // changing the href associated with the individual campsit links //
     changeHeroImage(); // changing the hero image //
     changeAboutText(); // changing the about us text //
     mapScrollDecide(); // setting the Map and Scroll direction based on which button is pressed //

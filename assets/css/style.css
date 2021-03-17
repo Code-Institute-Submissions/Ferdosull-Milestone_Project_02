@@ -1,10 +1,5 @@
-/* -----------------------------------------------Text Fonts and associated styling */
-.text-uppercase { /* ----New-VWCC--- */
-    text-align: center;
-	font-family: 'Voltaire', sans-serif;
-}
-
-.general-sub { /* ----New-VWCC--- */
+/* ---------------------------------------------Text Fonts and associated styling */
+.general-sub {
 	font-family: 'Voltaire', sans-serif;
 	font-size: 25px;
 	font-weight: bold;
@@ -16,7 +11,7 @@
     margin-right: 10rem;
 }
 
-body { /* ----New-VWCC--- */
+body {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -48,24 +43,22 @@ body { /* ----New-VWCC--- */
     color: #1c6e8c;
 }
 
-.link-font { /* ----New-VWCC--- */
+.link-font {
     color: #fbfcff;
 }
 
-.link-font-1 { /* ----New-VWCC--- */
+.link-font-1 {
 	margin-top: 1.5rem;
 	margin-left: 0.2rem;
 }
 
 /* ------------------------------------------------------------------------Navbar */
-
-.nav-item { /* ----New-VWCC--- */
+.nav-item {
 	font-size: 1.5rem;
 }
 
-.navalert-container { /* ----New-VWCC--- */
+.navalert-container {
 	font-family: 'Prompt', sans-serif;
-    /* position: fixed; /*to be added back in for mobile device in media query */
     top: 0;
     left: 0px;
     right: 0px;
@@ -74,7 +67,7 @@ body { /* ----New-VWCC--- */
     z-index: 99;
 }
 
-.navbar { /* ----New-VWCC--- */
+.navbar {
 	border-top: solid;
 	border-bottom: solid;
 	border-width: 0.18rem;
@@ -92,18 +85,19 @@ body { /* ----New-VWCC--- */
     z-index: 100;
 }
 
-.navbar-expand-md { /* ----New-VWCC--- */
+.navbar-expand-md {
 	color: #03ac13;
 }
 
-.navbar .navbar-toggler { /* ----New-VWCC--- */
+.navbar .navbar-toggler {
     border: 0;
 }
-.vw-logo { /* ----New-VWCC--- */
+
+.vw-logo {
 	width: 3.7rem;
 }
 
-.navbar-brand { /* ----New-VWCC--- */
+.navbar-brand {
 	border-style: solid;
 	border-radius: 1.5rem;
 	border-width: 0.18rem;
@@ -118,14 +112,14 @@ body { /* ----New-VWCC--- */
 	color: #03ac13 !important;
 }
 
-.navbar a:hover { /* ----New-VWCC Shamrock --- */
+.navbar a:hover {
 	color: #03ac13 !important; }
 	
-.navbar .navbar-nav a { /* ----New-VWCC--- */
+.navbar .navbar-nav a {
     font-weight: bold;
 }
 
-.collapse { /* ----New-VWCC--- */
+.collapse {
     background-color:#23395d;
 }
 
@@ -151,20 +145,19 @@ body { /* ----New-VWCC--- */
 }
 
 /* ------------------------------------------------------------------------Buttons*/
-
-.btn-info { /* ----New-VWCC--- */
+.btn-info {
 	width: 12rem;
 	height: 4rem;
     margin: 0.3rem;
 	margin-top: 1rem;
 }
 
-.btn-bottom { /* ----New-VWCC--- */
+.btn-bottom {
 	margin-bottom: 3rem;
 	background-color: #f0f0f0;
 }
 
-.btn-align { /* ----New-VWCC--- */
+.btn-align {
     padding-left: 4rem;
 }
 
@@ -185,18 +178,9 @@ body { /* ----New-VWCC--- */
   margin: 2px;
 
 }
-/* -------------------------------------------------------------------Colours used*/
-
-/* --------Rufous Red = #A72608 -- (changed to #E60023 as it is easier to see) -- */
-/* -----Xiketic Brown = #18020C -- */
-/* ------Roman Silver = #828A95 -- */
-/* --------Mint Cream = #ECFFF8 -- */
-/* --Rich Black FOGRA = #01161E -- */
-/* ---------Off White = #FAFAFA -- */
 
 /* -----------------------------------------------------------------Image Styling */
-
-.background_image { /* ----New-VWCC--- */
+.background_image {
 	width: 100%;
 	padding-left: 10%;
     padding-right: 10%;
@@ -214,7 +198,7 @@ body { /* ----New-VWCC--- */
     filter: alpha(opacity=0);
 }
 
-.background_image_ab { /* ----New-VWCC--- */
+.background_image_ab {
 	width: 100%;
 	padding-left: 10%;
     padding-right: 10%;
@@ -231,13 +215,12 @@ body { /* ----New-VWCC--- */
     filter: alpha(opacity=0);
 }
 
-.container { /* ----New-VWCC--- */
+.container {
     position: relative;
 }
 
 /* ----------------------------------------------------------------------Headings */
-
-.jumbotron-header { /* ----New-VWCC--- */
+.jumbotron-header {
     color: #1c6e8c;
 	text-shadow:2px 0 0 #A0A0A0,0 2px 0 #A0A0A0,2px 0 0 #A0A0A0,0 2px 0 #A0A0A0;
 	font-family: 'Prompt', sans-serif;
@@ -261,9 +244,7 @@ body { /* ----New-VWCC--- */
     text-align: justify;
 }
 
-
 /* -----------------------------------------------------Site Specific Information */
-
 .sitespecific {
     border: 0.3rem double #1c6e8c;
     border-radius: 1rem;
@@ -313,7 +294,6 @@ body { /* ----New-VWCC--- */
 }
 
 /* ------------------------------------------------Header Text Transition Fade-In */
-
 .fade-in-2sec {
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
@@ -413,7 +393,6 @@ body { /* ----New-VWCC--- */
     100% {opacity:1;}
 }
 /* -----------------------------------------------------------------/Overlays.css */
-
 .pic-overlay { /* ----New-VWCC--- */
     position: absolute; 
     bottom: 20px;
@@ -444,9 +423,7 @@ body { /* ----New-VWCC--- */
     border-radius: 0.6rem;
 }
 
-
 /* --------------------------------------------------------------------Modals.css */
-
 .modal-body {
 	font-family: 'Prompt', sans-serif;
 }
@@ -561,22 +538,22 @@ body { /* ----New-VWCC--- */
 }
 
 /* ------------------------------------------------------------------------Footer */
-#footer-details { /* ----New-VWCC--- */
+#footer-details {
     padding-top: 20px;
 	padding-left: 20px;
 	padding-bottom: 20px;
 	text-align: left;
 }
 
-.right_column { /* ----New-VWCC--- */
+.right_column {
 	padding-left: 50px;
 }
 
-.middle_column { /* ----New-VWCC--- */
+.middle_column {
 	padding-right: 50px;
 }
 
-footer { /* ----New-VWCC--- */
+footer {
     background-color: #1c6e8c;
 	border-top: solid;
 	border-bottom: solid;
@@ -588,11 +565,11 @@ footer { /* ----New-VWCC--- */
     margin: 0;
 }
 
-.social-links { /* ----New-VWCC--- */
+.social-links {
     padding-bottom: 0;
 }
 
-.social-links li a i { /* ----New-VWCC--- */
+.social-links li a i {
 	border: solid;
 	border-width: 0.2rem;
     width: 3.5rem;
@@ -611,50 +588,50 @@ footer { /* ----New-VWCC--- */
 
 /* - The colour picker used was: https://imagecolorpicker.com/en/ - */
 
-.fa-facebook { /* ----New-VWCC--- */
+.fa-facebook {
 	background: #3b589c;
 	font-size: 1.8rem;
 	padding-top: 0.8rem;
 }
 
-.fa-instagram { /* ----New-VWCC--- */
+.fa-instagram {
     background: #ef0075;
 	font-size: 2.0rem;
 	padding-top: 0.5rem;
 }
 
-.fa-twitter { /* ----New-VWCC--- */
+.fa-twitter {
     background: #1da1f3;
 	font-size: 1.8rem;
 	padding-top: 0.7rem;
 }
 
-.fa-youtube { /* ----New-VWCC--- */
+.fa-youtube {
     background: #Fe0000;
 	font-size: 1.8rem;
 	padding-top: 0.7rem;
 }
 
-.list-inline-item:not(:last-child) { /* ----New-VWCC--- */
+.list-inline-item:not(:last-child) {
 	margin-right: .65rem;
 }
 
-.fa-mobile-alt { /* ----New-VWCC--- */
+.fa-mobile-alt {
     font-size: 1.2rem;
     margin-right: 0.4rem;
 }
 
-.fa-envelope { /* ----New-VWCC--- */
+.fa-envelope {
     font-size: 1.2rem;
     margin-right: 0.4rem;
 }
 
-.fa-file-signature { /* ----New-VWCC--- */
+.fa-file-signature {
     color: #fafafa;
     font-size: 1.5rem;
 }
 
-.fa-file-signature:hover { /* ----New-VWCC--- */
+.fa-file-signature:hover {
     color: #03ac13;
     font-size: 1.5rem;
 }
@@ -670,18 +647,6 @@ div#map {
 }
 
 /* -------------------------------------------------Start of the Media Queries--- */
-/* -------------------------------------------------Start of the Media Queries--- */
-/* -------------------------------------------------Start of the Media Queries--- */
-
-
-
-/* ---------------------------------------------- -Media Query (Max-Width) 1400px */
-
-/* ------------------------------------------------Media Query (Max-Width) 1370px */
-
-@media(max-width: 1370px) {
-
-}
 
 /* ------------------------------------------------Media Query (Max-Width) 1280px */
 
@@ -689,25 +654,17 @@ div#map {
     .list-inline-item:not(:last-child) {
 		margin-bottom: .5rem;
     }
-    .jumbotron-header { /* ----New-VWCC--- */
+    .jumbotron-header {
         font-size: 4.0vw;
     }
 }
 
-
-/* ---------------------Media Query (Larger than IPAD Landscape Min-Width) 1030px */
-/* Hovers and overlays work as normal until 1030px resolution is exceeded */
-
-
-
-/* ---------------------Media Query (Smaller than IPAD Landscape Max-Width) 1030px */
-/* Gallery & We Need You Section Pics have constant text with opaque background */
-
+/* ------------------------------------------------Media Query (Max-Width) 1030px */
 @media(max-width: 1030px) {
-	.vw-logo { /* ----New-VWCC--- */
+	.vw-logo {
 	    width: 2.7rem;
 	}
-	.navbar-brand { /* ----New-VWCC--- */
+	.navbar-brand {
         border-radius: 1.5rem;
         border-width: 0.18rem;
         padding-top: 0.1rem;
@@ -719,12 +676,12 @@ div#map {
         margin-left: 10px;
         color: #fbfcff;
     }
-    .jumbotron-header { /* ----New-VWCC--- */
+    .jumbotron-header {
         font-size: 4.5vw;
         padding-left: 10px;
         padding-right: 10px;
     }
-    .general-sub { /* ----New-VWCC--- */
+    .general-sub {
         font-size: 18px;
     }
     .right_column {
@@ -733,7 +690,7 @@ div#map {
     .middle_column {
         padding-right: 20px;
     }
-    .btn-align { /* ----New-VWCC--- */
+    .btn-align {
         padding-left: 0.5rem;
     }
     .left-column {
@@ -748,13 +705,13 @@ div#map {
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 992px */
-
 @media(max-width: 992px) {
     div#map {
         margin-left: 9.8rem;
     }
 }
 
+/* -------------------------------------------------Media Query (Max-Width) 900px */
 @media(max-width: 900px) {
     .write-up {
         margin-left: 2rem;
@@ -762,12 +719,12 @@ div#map {
     }
 }
 
-
+/* -------------------------------------------------Media Query (Max-Width) 768px */
 @media(max-width: 768px) {
     .sitespecific h2{
         font-size: 1.5rem;
     }
-    .middle_column { /* ----New-VWCC--- */
+    .middle_column {
         padding-top: 35px;
         padding-right: 100px;
     }
@@ -784,7 +741,6 @@ div#map {
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 670px */
-
 @media(max-width: 670px) {
     .jumbotron-header { /* ----New-VWCC--- */
         font-size: 5.5vw;
@@ -803,7 +759,6 @@ div#map {
 }
 
 /* ----------------------------------------------- -Media Query (Max-Width) 500px */
-
 @media(max-width: 500px) {
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
@@ -817,13 +772,8 @@ div#map {
         margin-left: 3rem;
     }	
 }
-/* -------------------------------------------------Media Query (Max-Width) 365px */
 
-@media(max-width: 365px) {	
-}
-
-/* -------------------------------------------------Media Query (Max-Height) 420px */
-
+/* ------------------------------------------------Media Query (Max-Height) 420px */
 @media(max-height: 420px) {
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
