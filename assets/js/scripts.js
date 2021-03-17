@@ -1,11 +1,10 @@
 // Modal Js //
-
 function showModal() { // modal loaded from the icon in the footer //
     $("#myModal").modal('show');
 }
-
 showModal(); // automatic loading once landed at the website and at refresh //
 
+$('.centertext2').hide(); // Initial hiding of the main page button links //
 
 // Declared Global const campsite object //
 const campsites = {
@@ -88,9 +87,7 @@ function initMod(buttonNum) { // using button clicks and respective numbers to u
 }
 
 // Map and Scroll direction decide function //
-
 function mapScrollDecide() {
-    console.log(buttonIndex);
     if (buttonIndex == 0) {
         initMap(),
             scrollToAbout();
@@ -160,6 +157,9 @@ function scroll2Price() { // this function ensures that the person viewing the p
 
 // scroll to About Us Section //
 function scrollToAbout() {
+    if (buttonIndex == 0) {
+        $('.centertext2').hide();
+    }     
     setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({ behavior: 'smooth' }); }, 1 * 800);
 }
 
@@ -182,8 +182,7 @@ function changeHeroImageText() {
 
 // Change About Text //
 function changeAboutText() {
-    var addText = document.getElementById("moreInfo"); // getting the more info button by id //
-    addText.classList.remove('display1'); // removing the display1 class //
+    $('.centertext2').show();
     var newText = document.getElementById("change-text2"); // getting the about us text by id //
     newText.classList.remove('show_yourself'); // removing the show yourself class //
     newText.classList.add('hide'); // hiding the about us text with opacity transition //
@@ -194,19 +193,15 @@ function changeAboutText() {
 // Change Site Specific Info text //
 function changeSSInfoText(a, b) {
     var heroText = document.getElementById(a); // getting the header by id //
-    //heroText.classList.remove('show_yourself'); // removing the show yourself class //
-    //heroText.classList.add('hide'); // hiding the header element with opacity transition //
-    //heroText.classList.add('hide1'); // adding the opacity 0 !important //
-    //setTimeout(() => { heroText.innerHTML = b; heroText.classList.remove('hide1'); heroText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
     heroText.innerHTML = b;
 }
 
 function executeAll() { // executing all functions required to update the page with respect to the button being pressed //
     changeHeroImage(); // changing the hero image //
+    changeAboutText(); // changing the about us text //
     mapScrollDecide(); // setting the Map and Scroll direction based on which button is pressed //
     weatherSet(); // setting the weather depending on the new location //
     changeHeroImageText(); // changing the hero image text //
-    changeAboutText(); // changing the about us text //
     changeSSInfoText('dayRates', dayRateP);
     changeSSInfoText('wkndRates', weekRateP);
     changeSSInfoText('weekRates', weekendRateP);

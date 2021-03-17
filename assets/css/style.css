@@ -169,23 +169,21 @@ body { /* ----New-VWCC--- */
 }
 
 .infoCol {
-  color: #03ac13;
-  background-color: #1c6e8c;
+  color: #fbfcff;
+  background-color: #17A2B8;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
+  margin: 2px;
 
 }
 
 .infoCol:hover {
-  color: #f0f0f0;
+  color: #fbfcff;
   background-color: #999;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
+  margin: 2px;
 
-}
-
-.display1 {
-    display: none;
 }
 /* -------------------------------------------------------------------Colours used*/
 
