@@ -273,6 +273,7 @@ body { /* ----New-VWCC--- */
     font-family: 'Voltaire', sans-serif;
     font-weight: bold;
     padding-left: 1rem;
+    padding-right: 1rem;
     margin-left: 1rem;
     margin-top: 2rem;
 }
@@ -305,14 +306,12 @@ body { /* ----New-VWCC--- */
 
 .left-column {
     display: inline-block;
-    width: 50%;
 }
 
 .right-column {
     display: inline-block;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
-    width: 50%;
 }
 
 /* ------------------------------------------------Header Text Transition Fade-In */
@@ -681,17 +680,13 @@ div#map {
 /* ---------------------------------------------- -Media Query (Max-Width) 1400px */
 
 @media(max-width: 1400px) {
-    .right-column {
-        width: 50%;
-    }
+
 }
 
 /* ------------------------------------------------Media Query (Max-Width) 1370px */
 
 @media(max-width: 1370px) {
-    .right-column {
-        width: 50%;
-    }
+
 }
 
 /* ------------------------------------------------Media Query (Max-Width) 1280px */
@@ -700,13 +695,11 @@ div#map {
     .list-inline-item:not(:last-child) {
 		margin-bottom: .5rem;
     }
-    .right-column {
-        width: 50%;
-    }
     .jumbotron-header { /* ----New-VWCC--- */
         font-size: 4.0vw;
     }
 }
+
 
 /* ---------------------Media Query (Larger than IPAD Landscape Min-Width) 1030px */
 /* Hovers and overlays work as normal until 1030px resolution is exceeded */
@@ -737,13 +730,6 @@ div#map {
         padding-left: 10px;
         padding-right: 10px;
     }
-    div#map {
-        margin-left: 9.7rem;
-    }
-    .right-column {
-        width: 50%;
-        margin-left: 6.5rem;
-    }
     .general-sub { /* ----New-VWCC--- */
         font-size: 18px;
     }
@@ -756,21 +742,25 @@ div#map {
     .btn-align { /* ----New-VWCC--- */
         padding-left: 0.5rem;
     }
+    .left-column {
+        display: flex;
+        align-items: center;
+    }
+
+    .right-column {
+        display: inline-block;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 992px */
 
 @media(max-width: 992px) {
-    .right-column {
-        width: 70%;
-        margin-left: 5.0rem;
-    }
+
 }
 
 @media(max-width: 900px) {
-    .right-column {
-        width: 70%;
-    }
     .write-up {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -781,13 +771,6 @@ div#map {
 @media(max-width: 768px) {
     .sitespecific h2{
         font-size: 1.5rem;
-    }
-    div#map {
-        margin-left: 4.1rem;
-    }
-    .right-column {
-        width: 70%;
-        margin-left: 5.0rem;
     }
     .middle_column { /* ----New-VWCC--- */
         padding-top: 35px;
@@ -805,20 +788,11 @@ div#map {
 /* -------------------------------------------------Media Query (Max-Width) 670px */
 
 @media(max-width: 670px) {
-    .right-column {
-        width: 70%;
-        margin-left: 0rem;
-        padding-left: 1rem;
-    }
     .jumbotron-header { /* ----New-VWCC--- */
         font-size: 5.5vw;
     }
     .sitespecific h2{
         font-size: 1.5rem;
-    }
-    div#map {
-        height: 21.7rem;
-        width: 22rem;
     }
     .write-up {
         margin-left: 1rem;
@@ -832,24 +806,14 @@ div#map {
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
     }
-    .right-column {
-        width: 90%;
-    }
     .btn-info { 
         width: 20rem;
         height: 5rem;
-    }
-    div#map {
-        margin-left: 1rem;
-        width: 18rem;
     }	
 }
 /* -------------------------------------------------Media Query (Max-Width) 365px */
 
-@media(max-width: 365px) {
-    .right-column {
-        width: 95%;
-    }	
+@media(max-width: 365px) {	
 }
 
 /* -------------------------------------------------Media Query (Max-Height) 420px */
@@ -857,8 +821,5 @@ div#map {
 @media(max-height: 420px) {
 	.list-inline-item:not(:last-child) {
 		margin-right: .3rem;
-    }
-    .right-column {
-        width: 95%;
     }
 }
