@@ -649,7 +649,6 @@ div#map {
 /* -------------------------------------------------Start of the Media Queries--- */
 
 /* ------------------------------------------------Media Query (Max-Width) 1280px */
-
 @media(max-width: 1280px) {
     .list-inline-item:not(:last-child) {
 		margin-bottom: .5rem;
@@ -659,6 +658,28 @@ div#map {
     }
 }
 
+/* -------social media hover works as normal until 1030px resolution is exceeded */
+@media(min-width: 1030px) {
+    .fa-facebook:hover {
+        background: #fafafa;
+        color: #3b589c;
+    }
+
+    .fa-instagram:hover {
+        background: #fafafa;
+        color: #ef0075;
+    }
+
+    .fa-twitter:hover {
+        background: #fafafa;
+        color: #1da1f3;
+    }
+
+    .fa-youtube:hover {
+        background: #fafafa;
+        color: #Fe0000;
+    }
+}
 /* ------------------------------------------------Media Query (Max-Width) 1030px */
 @media(max-width: 1030px) {
 	.vw-logo {
