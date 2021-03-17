@@ -679,6 +679,9 @@ div#map {
         background: #fafafa;
         color: #Fe0000;
     }
+    .link-font:hover {
+        color: #03ac13;
+}
 }
 /* ------------------------------------------------Media Query (Max-Width) 1030px */
 @media(max-width: 1030px) {
