@@ -65,36 +65,52 @@ const campsites = {
 }
 
 // Declaring "null/undefined" ariables to be updated on button clicks //
-var name; var latitude; var longitude; var zoomSize; var newHeroImage; var newWeather1; var newWeather2; var campSiteLnk; var newAboutTxt;
-var fadeEffect; var buttonIndex = 0; var dayRateP; var weekRateP; var weekendRateP; var pitchQuantity; var advancedNotice;
+let name; 
+let latitude;
+let longitude;
+let zoomSize;
+let newHeroImage;
+let newWeather1;
+let newWeather2;
+let campSiteLnk;
+let newAboutTxt;
+let fadeEffect;
+let siteIndex = 'vwcc';
+let dayRateP;
+let weekRateP;
+let weekendRateP;
+let pitchQuantity;
+let advancedNotice;
 
-function initMod(buttonNum) { // using button clicks and respective numbers to update the function from the object //
-    return (name = Object.keys(campsites).map((key) => campsites[key]['name'])[buttonNum],
-        latitude = Object.keys(campsites).map((key) => campsites[key]['coordinates'])[buttonNum][0],
-        longitude = Object.keys(campsites).map((key) => campsites[key]['coordinates'])[buttonNum][1],
-        zoomSize = Object.keys(campsites).map((key) => campsites[key]['zoom'])[buttonNum],
-        newHeroImage = Object.keys(campsites).map((key) => campsites[key]['heroImageSrc'])[buttonNum],
-        newWeather1 = Object.keys(campsites).map((key) => campsites[key]['Urls'])[buttonNum][0],
-        newWeather2 = Object.keys(campsites).map((key) => campsites[key]['Urls'])[buttonNum][1],
-        campSiteLnk = Object.keys(campsites).map((key) => campsites[key]['Urls'])[buttonNum][2],
-        newAboutTxt = Object.keys(campsites).map((key) => campsites[key]['description'])[buttonNum],
-        dayRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][0],
-        weekRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][1],
-        weekendRateP = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][2],
-        pitchQuantity = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][3],
-        advancedNotice = Object.keys(campsites).map((key) => campsites[key]['campsiteDetails'])[buttonNum][4],
-        buttonIndex = (buttonNum)),
-        executeAll();
-}
+// function used to assign values to variables to be used and displayed on the web page based on button clicks //
+ function initMod(buttonSite) { // using button clicks and respective key values to update the function from the object //
+    const [siteKey, selectedSite] = Object.entries(campsites).filter(([key, value]) => key === buttonSite)[0]
+    name = selectedSite.name
+    latitude = selectedSite.coordinates[0]
+    longitude = selectedSite.coordinates[1]
+    zoomSize = selectedSite.zoom
+    newHeroImage = selectedSite.heroImageSrc
+    newWeather1 = selectedSite.Urls[0]
+    newWeather2 = selectedSite.Urls[1]
+    campSiteLnk = selectedSite.Urls[2]
+    newAboutTxt = selectedSite.description
+    dayRateP = selectedSite.campsiteDetails[0]
+    weekRateP = selectedSite.campsiteDetails[1]
+    weekendRateP = selectedSite.campsiteDetails[2]
+    pitchQuantity = selectedSite.campsiteDetails[3]
+    advancedNotice = selectedSite.campsiteDetails[4]
+    siteIndex = buttonSite
+    executeAll()
+ }
 
-// Get HREF from "Visit Our Site" button and change to suit the campsit location chosen //
+// Get href from "Visit Our Site" button and change to suit the campsit location chosen //
 function changeHref() {
     $("#changeHref").attr("href", campSiteLnk);
 }
 
 // Map and Scroll direction decide function //
 function mapScrollDecide() {
-    if (buttonIndex == 0) {
+    if (siteIndex == 'vwcc') {
         initMap(),
             scrollToAbout();
     } else {
@@ -163,7 +179,7 @@ function scroll2Price() { // this function ensures that the person viewing the p
 
 // scroll to About Us Section //
 function scrollToAbout() {
-    if (buttonIndex == 0) {
+    if (siteIndex == 'vwcc') {
         $('.centertext2').hide();
     }     
     setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({ behavior: 'smooth' }); }, 1 * 800);
@@ -209,9 +225,9 @@ function executeAll() { // executing all functions required to update the page w
     mapScrollDecide(); // setting the Map and Scroll direction based on which button is pressed //
     weatherSet(); // setting the weather depending on the new location //
     changeHeroImageText(); // changing the hero image text //
-    changeSSInfoText('dayRates', dayRateP);
-    changeSSInfoText('wkndRates', weekRateP);
-    changeSSInfoText('weekRates', weekendRateP);
-    changeSSInfoText('pQuant', pitchQuantity);
-    changeSSInfoText('avanNotP', advancedNotice);
+    changeSSInfoText('dayRates', dayRateP); // Change Site Specific Info text by feeding in two variables //
+    changeSSInfoText('wkndRates', weekRateP); // Change Site Specific Info text by feeding in two variables //
+    changeSSInfoText('weekRates', weekendRateP); // Change Site Specific Info text by feeding in two variables //
+    changeSSInfoText('pQuant', pitchQuantity); // Change Site Specific Info text by feeding in two variables //
+    changeSSInfoText('avanNotP', advancedNotice); // Change Site Specific Info text by feeding in two variables //
 }
