@@ -679,10 +679,6 @@ div#map {
 
 /* ---------------------------------------------- -Media Query (Max-Width) 1400px */
 
-@media(max-width: 1400px) {
-
-}
-
 /* ------------------------------------------------Media Query (Max-Width) 1370px */
 
 @media(max-width: 1370px) {
@@ -746,7 +742,6 @@ div#map {
         display: flex;
         align-items: center;
     }
-
     .right-column {
         display: inline-block;
         padding-bottom: 2rem;
@@ -757,7 +752,9 @@ div#map {
 /* -------------------------------------------------Media Query (Max-Width) 992px */
 
 @media(max-width: 992px) {
-
+    div#map {
+        margin-left: 9.8rem;
+    }
 }
 
 @media(max-width: 900px) {
@@ -783,6 +780,9 @@ div#map {
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    div#map {
+        margin-left: 4.4rem;
+    }
 }
 
 /* -------------------------------------------------Media Query (Max-Width) 670px */
@@ -798,6 +798,10 @@ div#map {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    div#map {
+        width: 75%;
+        margin-left: 4rem;
+    }
 }
 
 /* ----------------------------------------------- -Media Query (Max-Width) 500px */
@@ -809,6 +813,10 @@ div#map {
     .btn-info { 
         width: 20rem;
         height: 5rem;
+    }
+    div#map {
+        width: 80%;
+        margin-left: 3rem;
     }	
 }
 /* -------------------------------------------------Media Query (Max-Width) 365px */
