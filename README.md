@@ -153,7 +153,7 @@ All additions and changes made to complete this project were carried out in this
 
 **How to Deploy My Milestone\_Project\_02 on GitHub Pages** <a name="how_to_deploy"></a>
 
-1. Navigate to the GitHub [Repository:[\]https://github.com/Ferdosull/Milestone_Project_03 ](https://github.com/Ferdosull/Milestone_Project_03)**
+1. Navigate to the GitHub [Repository:[\]https://github.com/Ferdosull/Milestone_Project_02 ](https://github.com/Ferdosull/Milestone_Project_03)**
 
 2. Click on the 'Settings' Tab highlighted in the following screenshot.** 
 
