@@ -537,6 +537,11 @@ body {
     color: #03ac13;
 }
 
+.form-control {
+    margin-top: -12px;
+    margin-bottom: 18px;
+}
+
 /* ------------------------------------------------------------------------Footer */
 #footer-details {
     padding-top: 20px;
@@ -681,7 +686,10 @@ div#map {
     }
     .link-font:hover {
         color: #03ac13;
-}
+    }
+    .mobileDisplay {
+        display: none;
+    }
 }
 /* ------------------------------------------------Media Query (Max-Width) 1030px */
 @media(max-width: 1030px) {
