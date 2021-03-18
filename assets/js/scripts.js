@@ -87,7 +87,7 @@ const campsites = {
 };
 
 // Declaring "null/undefined" ariables to be updated on button clicks //
-let names; 
+let names;
 let latitude;
 let longitude;
 let zoomSize;
@@ -105,7 +105,7 @@ let pitchQuantity;
 let advancedNotice;
 
 // function used to assign values to variables to be used and displayed on the web page based on button clicks //
- function initMod(buttonSite) { // using button clicks and respective key values to update the function from the object //
+function initMod(buttonSite) { // using button clicks and respective key values to update the function from the object //
     const [siteKey, selectedSite] = Object.entries(campsites).filter(([key, value]) => key === buttonSite)[0];
     names = selectedSite.name;
     latitude = selectedSite.coordinates[0];
@@ -123,7 +123,7 @@ let advancedNotice;
     advancedNotice = selectedSite.campsiteDetails[4];
     siteIndex = buttonSite;
     executeAll();
- }
+}
 
 // Get href from "Visit Our Site" button and change to suit the campsit location chosen //
 function changeHref() {
@@ -180,7 +180,7 @@ function scroll2Price() { // this function ensures that the person viewing the p
 function scrollToAbout() {
     if (siteIndex == 'vwcc') {
         $('.centertext2').hide();
-    }     
+    }
     setTimeout(() => { document.querySelector('#scroll1').scrollIntoView({ behavior: 'smooth' }); }, 1 * 800);
 }
 
