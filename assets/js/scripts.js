@@ -106,21 +106,21 @@ let advancedNotice;
 
 // function used to assign values to variables to be used and displayed on the web page based on button clicks //
  function initMod(buttonSite) { // using button clicks and respective key values to update the function from the object //
-    const [siteKey, selectedSite] = Object.entries(campsites).filter(([key, value]) => key === buttonSite)[0],
-    names = selectedSite.name,
-    latitude = selectedSite.coordinates[0],
-    longitude = selectedSite.coordinates[1],
-    zoomSize = selectedSite.zoom,
-    newHeroImage = selectedSite.heroImageSrc,
-    newWeather1 = selectedSite.Urls[0],
-    newWeather2 = selectedSite.Urls[1],
-    campSiteLnk = selectedSite.Urls[2],
-    newAboutTxt = selectedSite.description,
-    dayRateP = selectedSite.campsiteDetails[0],
-    weekRateP = selectedSite.campsiteDetails[1],
-    weekendRateP = selectedSite.campsiteDetails[2],
-    pitchQuantity = selectedSite.campsiteDetails[3],
-    advancedNotice = selectedSite.campsiteDetails[4],
+    const [siteKey, selectedSite] = Object.entries(campsites).filter(([key, value]) => key === buttonSite)[0];
+    names = selectedSite.name;
+    latitude = selectedSite.coordinates[0];
+    longitude = selectedSite.coordinates[1];
+    zoomSize = selectedSite.zoom;
+    newHeroImage = selectedSite.heroImageSrc;
+    newWeather1 = selectedSite.Urls[0];
+    newWeather2 = selectedSite.Urls[1];
+    campSiteLnk = selectedSite.Urls[2];
+    newAboutTxt = selectedSite.description;
+    dayRateP = selectedSite.campsiteDetails[0];
+    weekRateP = selectedSite.campsiteDetails[1];
+    weekendRateP = selectedSite.campsiteDetails[2];
+    pitchQuantity = selectedSite.campsiteDetails[3];
+    advancedNotice = selectedSite.campsiteDetails[4];
     siteIndex = buttonSite;
     executeAll();
  }
