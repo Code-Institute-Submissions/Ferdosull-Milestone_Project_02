@@ -62,10 +62,10 @@ const campsites = {
         heroImageSrc: 'assets/images/knockalla.jpg',
         campsiteDetails: ['18', '85', '45', '22', '1']
     },
-}
+};
 
 // Declaring "null/undefined" ariables to be updated on button clicks //
-let name; 
+let names; 
 let latitude;
 let longitude;
 let zoomSize;
@@ -84,23 +84,23 @@ let advancedNotice;
 
 // function used to assign values to variables to be used and displayed on the web page based on button clicks //
  function initMod(buttonSite) { // using button clicks and respective key values to update the function from the object //
-    const [siteKey, selectedSite] = Object.entries(campsites).filter(([key, value]) => key === buttonSite)[0]
-    name = selectedSite.name
-    latitude = selectedSite.coordinates[0]
-    longitude = selectedSite.coordinates[1]
-    zoomSize = selectedSite.zoom
-    newHeroImage = selectedSite.heroImageSrc
-    newWeather1 = selectedSite.Urls[0]
-    newWeather2 = selectedSite.Urls[1]
-    campSiteLnk = selectedSite.Urls[2]
-    newAboutTxt = selectedSite.description
-    dayRateP = selectedSite.campsiteDetails[0]
-    weekRateP = selectedSite.campsiteDetails[1]
-    weekendRateP = selectedSite.campsiteDetails[2]
-    pitchQuantity = selectedSite.campsiteDetails[3]
-    advancedNotice = selectedSite.campsiteDetails[4]
-    siteIndex = buttonSite
-    executeAll()
+    const [siteKey, selectedSite] = Object.entries(campsites).filter(([key, value]) => key === buttonSite)[0],
+    names = selectedSite.name,
+    latitude = selectedSite.coordinates[0],
+    longitude = selectedSite.coordinates[1],
+    zoomSize = selectedSite.zoom,
+    newHeroImage = selectedSite.heroImageSrc,
+    newWeather1 = selectedSite.Urls[0],
+    newWeather2 = selectedSite.Urls[1],
+    campSiteLnk = selectedSite.Urls[2],
+    newAboutTxt = selectedSite.description,
+    dayRateP = selectedSite.campsiteDetails[0],
+    weekRateP = selectedSite.campsiteDetails[1],
+    weekendRateP = selectedSite.campsiteDetails[2],
+    pitchQuantity = selectedSite.campsiteDetails[3],
+    advancedNotice = selectedSite.campsiteDetails[4],
+    siteIndex = buttonSite;
+    executeAll();
  }
 
 // Get href from "Visit Our Site" button and change to suit the campsit location chosen //
@@ -148,7 +148,7 @@ function setMap() { // function to change the map locations, name of location, c
         zoom: zoomSize,
         center: { lat: latitude, lng: longitude }
     });
-    var labels = name;
+    var labels = names;
     var locations = [
         { lat: latitude, lng: longitude }
     ];
@@ -165,11 +165,11 @@ function setMap() { // function to change the map locations, name of location, c
 function changeHeroImage() { // function to change the background image at the top of the page //
     var heroDiv = document.getElementById("image-change"); // find the image by id //
     var heroImage = document.getElementById("heroImage");
-    $('#image-change').addClass("hide")
-    setTimeout(() => { $('#image-change').addClass("hide1") }, 1 * 450);
-    setTimeout(() => { heroImage.src = newHeroImage }, 1 * 580);
-    setTimeout(() => { $('#image-change').removeClass("hide"), $('#image-change').removeClass("hide1"), $('#image-change').addClass("show_yourself") }, 1 * 650);
-    setTimeout(() => { $('#image-change').removeClass("show_yourself") }, 1 * 1200);
+    $('#image-change').addClass("hide");
+    setTimeout(() => { $('#image-change').addClass("hide1"); }, 1 * 450);
+    setTimeout(() => { heroImage.src = newHeroImage; }, 1 * 580);
+    setTimeout(() => { $('#image-change').removeClass("hide"), $('#image-change').removeClass("hide1"), $('#image-change').addClass("show_yourself"); }, 1 * 650);
+    setTimeout(() => { $('#image-change').removeClass("show_yourself"); }, 1 * 1200);
 }
 
 // Scroll back to top of page //
@@ -199,7 +199,7 @@ function changeHeroImageText() {
     heroText.classList.remove('show_yourself'); // removing the show yourself class //
     heroText.classList.add('hide'); // hiding the header element with opacity transition //
     heroText.classList.add('hide1'); // adding the opacity 0 !important //
-    setTimeout(() => { heroText.innerHTML = name; heroText.classList.remove('hide1'); heroText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
+    setTimeout(() => { heroText.innerHTML = names; heroText.classList.remove('hide1'); heroText.classList.add('show_yourself'); }, 1 * 1000); // setting a time interval before changing to the new header text //
 }
 
 // Change About Text //
