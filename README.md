@@ -36,7 +36,7 @@
 9. [Testing](#testing)
     1. [Website Responsiveness and Call to Action Functionality Testing Procedure](#testing_procedure)
     2. [Testing User Stories](#testing_user_stories)
-    3. [HTML and CSS Validation](#validation)
+    3. [HTML CSS and JavaScript Validation](#validation)
 10. [Future "Nice to Have" Additions to The Website](#additions)
 11. [Creation of Template and Deployment of Project](#project_deployment)
     1. [Creating a New Project](#new_project)
@@ -69,57 +69,174 @@ The VWCC website is a single page responsive website which utilises javasript ev
 Please see initial envisioned wireframes (before project start) and actual screenshots of the finished website in the sections that follow:
 <br/><br/>
 
-
 ### Wire Frames <a name="wire_frame"></a>
 
 ![](assets/readme_images/README.002.png)
 
+The wire-frames I found were very useful this time around. I had envisioned doing a top 10 campsites, as can be seen in the wire-frame, but the workload was too much to 
+try and fit into the time frame before submission. The code (JavaScript Object) has been left in such a way that five more could be added at a later date, at the clients request.
+<br/><br/>
 
 ### Pop up Modal <a name="pop_modal"></a>
 
 ![](assets/readme_images/README.003.png)
 
+The Pop-Up modal is the first item to load from the script.js file once the main page has been loaded. The Pop-up modal is my take on utilising the form element in conjunction with Emailjs.
+It is fully functioning as can be seen from the incorporated screenshots below. I have changed the "Project Request" section to be an "Enter Coupon" section for redeeming percentage-off holiday stays.
+I have only used the "required" status for the name and email element, just incase the visitor does not have a coupon code but still wishes to subscribe to the VWCC club.
+<br/><br/>
 
 ### Nav Bar <a name="nav_bar"></a>
 
 ![](assets/readme_images/README.004.png)
 
+On this occassion I have decided not to have the nav-bar fixed to the top, so once the page is scrolled it stays at its absolute location. I felt that the minimal appearance I was going for would appear 
+crowded in this circumstance if the nav-bar followed. The nav-bar can be separated up into desktop and mobile views as seen below. The "HOME" and VWCC logo reload the page while the "About" selector 
+scrolls the visitor to the info section which is roughly halfway down the page.
+<br/><br/>
 
 ### Hero Image <a name="hero_image"></a>
 
 ![](assets/readme_images/README.005.png)
 
+The Hero Image that loads upon first display of the page is of an iconic VW campervan, which is keeping in line with the clubs theme. This image is then updated to five other images using button clicks 
+to initialte JavaScript targeting of ids in the html and changing the image source. This is completed with delay transition timers in conjunction with the addion and removal of CSS classes to provide opacity effects.
+<br/><br/>
 
 ### Header & Description Text <a name="header_description"></a>
 
 ![](assets/readme_images/README.006.png)
+
+The Header text when first landed on the page is the name of the club "Volkswagon Choice Camping" and the description text below it is a small summary of what the club provides the site visitor.
+Both the Header and the description text get updated when any of the Top five buttons are pressed. For example, if "Lakeside C&C Park" is clicked/selected the header text and description text will change to 
+be in line with the button chosen. Like the hero image, this is also completed with delay transition timers in conjunction with the addion and removal of CSS classes to provide opacity effects
+<br/><br/>
 
 
 ### Page Links <a name="page_links"></a>
 
 ![](assets/readme_images/README.007.png)
 
+Underneath the description text are two selectors. "More Info!" and "Visit This Site!". The "More Info!" button is only visible on tablet and mobile devices. Its function is to scroll the visitor to the 
+campsite information section associated with the location that is currently being displayed. The "Visit This Site!" button has a href that is updated by JavaScript based also on the location being displayed.
+If pressed it will navigate the user to an external page associated with the campsite selected.
+<br/><br/>
 
 ### Top 5 Buttons <a name="t5_buttons"></a>
 
 ![](assets/readme_images/README.008.png)
 
+The Top 5 Buttons are used as "onclick" functions within the html, passing the 5 different key value variables for my object through the "initMod" function.
+The initMod function extracts only the required values from my object by using a filter method to update the global variables to be used by the subsequent funstions.
+<br/><br/>
 
 ### Google Maps <a name="g_map"></a>
 
 ![](assets/readme_images/README.009.png)
 
+When landing on the page initially the Google Maps div displays the Top 5 locations on a zoomed out map of Ireland.
+When any of the Top 5 buttons are clicked/selected, that particular location is selected, displayed and zoomed in closer, 
+with its full name as the label instead of a zoomed out letter character as was seen previously.
+<br/><br/>
 
 ### Campsite Information <a name="campsite"></a>
 
 ![](assets/readme_images/README.010.png)
 
+The campsite Information Section displays the following information for each site: Daily Stay Rate, Weekly Stay Rate, Weekend Stay Rate, 
+The Campsite Pitch Capacity and the Advance Notice period for booking a stay with them. Again, like before, this information updates for 
+each location based on the button clicked/selected.
+<br/><br/>
 
 ### Footer <a name="footer"></a>
 
 ![](assets/readme_images/README.011.png)
 
+The footer contains 3 sections, 1. A weather widget which also updates upon utilising the Top 5 buttons, 2.  A small paragraph again 
+enticing visitors of the site to join the club. At the end of this paragraph is a font awesome icon (newsletter) which, if clicked/selected, will re-load the 
+modal form again to allow the visitor to subscribe. 3. Social media icons which link to their respective pages, an email link which opens the 
+visitors default email service and populates the “To” section with bookings@vwcc.com, and an external phone link shortcut for use when viewed on mobile phone devices.
+<br/><br/>
 
+To ensure that I utilised the correct icon colours for each of the social media outlets in the footer I navigated to their official brand media pages 
+and used a HTML colour picker to select the correct colour. 
+Please see the image below of the colours picked for each icon using the following HTML colour picker: https://imagecolorpicker.com/en/
+<br/><br/>
+
+![](assets/readme_images/SOCIAL.001.png)
+<br/><br/>
+
+
+**The Structure Plane** <a name="structure_plane"></a>
+
+This website is a single page layout. It has a nav-bar at the top and a footer at the bottom. 
+The nav-bar turns into a mobile friendly toggler once below a specific resolution as dictated by the bootstrap class. On the left of the nav-bar is the Volkswagon logo, the VWCC lettering, 
+a “Home” selector and an “About” selector. Links in the nav-bar will change style on hover as is standard with the bootstrap navbar class. I have styled the hover colour to be green to fit 
+in with the rest of the webpages colour scheme. Underneath the nav-bar is where the “Hero-Image” is located. Underneath the hero image is where the jumbotron header and info paragraph can be found. 
+The hero image, jumbotron header and info paragraph are all updated through JavaScript once 1 of the 5 buttons are clicked/selected. Below the info paragraph is the “Visit This Site!” button. 
+This is hidden until a campsite is selected. Once a campsite is selected this same button will navigate you to the external page associated with that campsite.
+There is a “More Info” button below the “Visit This Site” button that is only displayed on mobile devices to allow for fast scroll to the campsite information section.
+The 5 buttons that carry out this function can be found in the vertical middle of the page. Underneath the 5 buttons are the Google Maps display div and the individual campsite information section. 
+Both the Google Maps display coordinates and campsite information sections are also updated upon one of the 5 campsite buttons being clicked/selected.
+The footer contains 3 sections, 1. A weather widget which also updates upon utilising the above five buttons, 2.  A small paragraph again urging visitors of the site to join the club. 
+At the end of this paragraph is a font awesome icon which, if clicked/selected, will re-load the modal form again to allow the visitor to subscribe. 3. Social media icons which link to their respective pages, 
+an email link which opens the visitors default email service and populates the “To” section with bookings@vwcc.com, and an external phone link for when viewed on mobile devices.
+
+
+
+## Typography <a name="typography"></a>
+
+The fonts used for the milestone project are: “Voltaire” and “Prompt”. 
+
+Both fonts were located and used from the website:[ https://fonts.google.com/ ](https://fonts.google.com/)
+
+![](assets/readme_images/FONT.png)
+
+I felt the contrast between Voltaire and Prompt has worked quite well. I have used Prompt for the nav bar and the jumbotron header and throughout the rest of 
+the project I have used Voltaire to bring the almost cartoon-like feeling associated with the colour scheme. I have made subtle changes to the font sizes and 
+spacings for responsiveness as can be seen in the style.css sheet. 
+<br/><br/>
+
+**HTML CSS and JavaScript Validation** <a name="validation"></a>
+
+Testing Code Validators for all sections of the website were carried out at: 
+
+HTML =[ https://validator.w3.org/ ](https://validator.w3.org/) CSS =[ https://jigsaw.w3.org/css-validator/ ](https://jigsaw.w3.org/css-validator/) and JavaScript = [ https://jshint.com/ ](https://jshint.com/)
+
+Below are screenshots of the results of my HTML page, my CSS stylesheet, and both JavaScript files. All Sections Passed with no errors:
+
+### index.html
+
+![](assets/readme_images/index.png)
+
+### style.css
+
+![](assets/readme_images/css.png)
+
+### scripts.js
+
+![](assets/readme_images/script.png)
+
+### sendMail.js
+
+![](assets/readme_images/sendMail.png)
+<br/><br/>
+
+## Future "Nice to Have" Additions to The Website <a name="additions"></a>
+
+If I could make further additions to the WVCC website down the line they would be to include the following:
+
+ * A "Log In" and payments section for returning users. This would provide processing and storage of the visitors previous vacation information, similar to booking.com.
+ Accumulated trips with the VWCC would enable them to build up a points system whereby further discounts or coupons could be passed back to the visitor.
+
+ * At some point down the line I would envision the Top 5 website becoming the Top 10 or the Top 20. The JavaScript code has been left in souch a way that this is possible
+ by the most efficient means. This would require additional info, additional website links and additional images.
+
+ * I think a review section for each location could be a good idea and a place where visitors can provide a star rating based on their stay.
+
+ * For the specific locations chosen by the 5 buttons I would like to show restaurants, attractions and other areas of interest on the Google Maps display also.
+ It would involve some more research into each area and further addition to camsite object in the file script.js, but all doable in the future.
+<br/><br/>
 
 
 ## Creation of Template and Deployment of this Project (GitHub & GitPod) <a name="project_deployment"></a>
