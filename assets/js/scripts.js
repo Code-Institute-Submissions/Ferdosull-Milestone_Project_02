@@ -1,8 +1,30 @@
+// Initial Loading of the GoogleMaps API Visuals and locations //
+function initMap() {
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 6.0,
+        center: { lat: 53.42830696507892, lng: -7.939229895133652 }
+    });
+    var labels = "ABCDE";
+    var locations = [
+        { lat: 52.9277403958966, lng: -8.420661941089131 }, // #1 //
+        { lat: 52.419866625338784, lng: -8.187759105906318 }, // #2 //
+        { lat: 51.83744663817569, lng: -9.900147501388021 }, // #3 //
+        { lat: 51.758844440963365, lng: -10.091116730629471 }, // #4 //
+        { lat: 55.18304735750677, lng: -7.61241954377543 } // #5 //
+    ];
+    var markers = locations.map(function (location, i) {
+        return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+        });
+    });
+    var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
+}
+
 // Modal Js //
 function showModal() { // modal loaded from the icon in the footer //
     $("#myModal").modal('show');
 }
-showModal(); // automatic loading once landed at the website and at refresh //
 
 $('.centertext2').hide(); // Initial hiding of the main page button links //
 
@@ -119,29 +141,6 @@ function mapScrollDecide() {
     }
 }
 
-// Initial Loading of the GoogleMaps API Visuals and locations //
-function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 6.0,
-        center: { lat: 53.42830696507892, lng: -7.939229895133652 }
-    });
-    var labels = "ABCDE";
-    var locations = [
-        { lat: 52.9277403958966, lng: -8.420661941089131 }, // #1 //
-        { lat: 52.419866625338784, lng: -8.187759105906318 }, // #2 //
-        { lat: 51.83744663817569, lng: -9.900147501388021 }, // #3 //
-        { lat: 51.758844440963365, lng: -10.091116730629471 }, // #4 //
-        { lat: 55.18304735750677, lng: -7.61241954377543 } // #5 //
-    ];
-    var markers = locations.map(function (location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-        });
-    });
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m", });
-}
-
 // Set Map from buttons //
 function setMap() { // function to change the map locations, name of location, coordinates and zoom value //
     var map = new google.maps.Map(document.getElementById("map"), {
@@ -231,3 +230,6 @@ function executeAll() { // executing all functions required to update the page w
     changeSSInfoText('pQuant', pitchQuantity); // Change Site Specific Info text by feeding in two variables //
     changeSSInfoText('avanNotP', advancedNotice); // Change Site Specific Info text by feeding in two variables //
 }
+
+// automatic loading once landed at the website and at refresh //
+showModal(); 
