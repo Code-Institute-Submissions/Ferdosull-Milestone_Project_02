@@ -33,9 +33,9 @@
 8. [References and Credits Section](#references_and_credits)
     1. [Code](#code)
     2. [Media](#media)
-9. [Testing](#testing)
-    1. [Website Responsiveness and Call to Action Functionality Testing Procedure](#testing_procedure)
-    2. [Testing User Stories](#testing_user_stories)
+9. [User Testing](#testing)
+    1. [Website Responsiveness](#testing_procedure)
+    2. [Call to Action Functionality Testing](#testing_user_stories)
     3. [HTML CSS and JavaScript Validation](#validation)
 10. [Future "Nice to Have" Additions to The Website](#additions)
 11. [Creation of Template and Deployment of Project](#project_deployment)
@@ -49,15 +49,15 @@
 
 My Milestone Project 2 was envisioned by me and created based on the knowledge gained so far from this course. 
 I have taken the fundamentals that I have learned from the course and applied them to this website with style changes and JS functions to suit my application.
-I hope that the outcome of my works has translated into a front-end web application that is accessible, responsive and promotes good user experience
+I hope that the outcome of my works has translated into a front-end web application with JavaScript functions, that is accessible, responsive and promotes good user experience
 through the use of HTML, CSS, Javascript, Google Maps API and Email.js.
-As well as the course materials, there have been some additional examples which I have found online and utilised. 
+As well as the course materials, there have been some additional code examples which I have found online and utilised. 
 These additions have been highlighted and referenced later on in this document (references and credits section).
 As well as these additions I have received excellent correction & further instruction from my mentor Maranatha Ilesanmi which I am extremely grateful for.
 
 ## Responsive Design <a name="responsive_design"></a>
 
-As seen in the screenshot below, media queries have been used to ensure that the website is completely responsive across Desktop and Mobile devices.
+As can be seen in the screenshot below, media queries have been used to ensure that the website is completely responsive across Desktop and Mobile devices.
 
 ![](assets/readme_images/README.001.png)
 
@@ -65,7 +65,7 @@ View the live project here:[ VWCC ](https://ferdosull.github.io/Milestone_Projec
 
 ## My Project Description and Design <a name="project_description"></a>
 
-The VWCC website is a single page responsive website which utilises javasript event listeners and onclick functions to change displayed data and navigation links. 
+The VWCC website is a single page responsive website which utilises JQuery & javasript methods and functions to change displayed data, images and navigation links. 
 Please see initial envisioned wireframes (before project start) and actual screenshots of the finished website in the sections that follow:
 <br/><br/>
 
@@ -73,8 +73,9 @@ Please see initial envisioned wireframes (before project start) and actual scree
 
 ![](assets/readme_images/README.002.png)
 
-The wire-frames I found were very useful this time around. I had envisioned doing a top 10 campsites, as can be seen in the wire-frame, but the workload was too much to 
-try and fit into the time frame before submission. The code (JavaScript Object) has been left in such a way that five more could be added at a later date, at the clients request.
+The wire-frames I found to be very useful this time around. I had envisioned doing a top 10 campsites, as can be seen in the wire-frames above, but the workload was too much to 
+try and fit into the time frame before submission. The code (JavaScript "campsite" Object) has been left in such a way that five or ten more locations could be added at a later date, 
+at the clients request.
 <br/><br/>
 
 ### Pop up Modal <a name="pop_modal"></a>
@@ -83,23 +84,23 @@ try and fit into the time frame before submission. The code (JavaScript Object) 
 
 The Pop-Up modal is the first item to load from the script.js file once the main page has been loaded. The Pop-up modal is my take on utilising the form element in conjunction with Emailjs.
 It is fully functioning as can be seen from the incorporated screenshots below. I have changed the "Project Request" section to be an "Enter Coupon" section for redeeming percentage-off holiday stays.
-I have only used the "required" status for the name and email element, just incase the visitor does not have a coupon code but still wishes to subscribe to the VWCC club.
+I have only used the "required" status for the name and email element form entry just incase the visitor does not have a coupon code but still wishes to subscribe to the VWCC club.
 <br/><br/>
 
 ### Nav Bar <a name="nav_bar"></a>
 
 ![](assets/readme_images/README.004.png)
 
-On this occassion I have decided not to have the nav-bar fixed to the top, so once the page is scrolled it stays at its absolute location. I felt that the minimal appearance I was going for would appear 
-crowded in this circumstance if the nav-bar followed. The nav-bar can be separated up into desktop and mobile views as seen below. The "HOME" and VWCC logo reload the page while the "About" selector 
-scrolls the visitor to the info section which is roughly halfway down the page.
+On this occassion I have decided not to have the nav-bar fixed to the top. Once the page is scrolled it stays at its absolute location. I felt that the minimal appearance I was going for would appear 
+crowded in this circumstance if the nav-bar followed. The nav-bar can be separated up into desktop and mobile views as seen below. The "HOME" and VWCC logo both reload the page while the "About" selector 
+scrolls the visitor to the info section, which is roughly halfway down the page.
 <br/><br/>
 
 ### Hero Image <a name="hero_image"></a>
 
 ![](assets/readme_images/README.005.png)
 
-The Hero Image that loads upon first display of the page is of an iconic VW campervan, which is keeping in line with the clubs theme. This image is then updated to five other images using button clicks 
+The Hero Image that loads upon first display of the page is of an iconic VW campervan, which is keeping in line with the clubs theme. This image is then updated through five other images using button clicks 
 to initialte JavaScript targeting of ids in the html and changing the image source. This is completed with delay transition timers in conjunction with the addion and removal of CSS classes to provide opacity effects.
 <br/><br/>
 
@@ -107,7 +108,7 @@ to initialte JavaScript targeting of ids in the html and changing the image sour
 
 ![](assets/readme_images/README.006.png)
 
-The Header text when first landed on the page is the name of the club "Volkswagon Choice Camping" and the description text below it is a small summary of what the club provides the site visitor.
+The Header text, when first landed on the page, is the name of the club, "Volkswagon Choice Camping" and the description text below it is a small summary of what the club provides the site visitor.
 Both the Header and the description text get updated when any of the Top five buttons are pressed. For example, if "Lakeside C&C Park" is clicked/selected the header text and description text will change to 
 be in line with the button chosen. Like the hero image, this is also completed with delay transition timers in conjunction with the addion and removal of CSS classes to provide opacity effects
 <br/><br/>
@@ -126,8 +127,8 @@ If pressed it will navigate the user to an external page associated with the cam
 
 ![](assets/readme_images/README.008.png)
 
-The Top 5 Buttons are used as "onclick" functions within the html, passing the 5 different key value variables for my object through the "initMod" function.
-The initMod function extracts only the required values from my object by using a filter method to update the global variables to be used by the subsequent funstions.
+The Top 5 Buttons are used as "onclick" functions within the html, passing the 5 different key value variables for my object ("campsites") through the "initMod" function.
+The initMod function extracts only the required values from my object by using a filter method to update the global variables to be used by the subsequent functions.
 <br/><br/>
 
 ### Google Maps <a name="g_map"></a>
@@ -135,8 +136,8 @@ The initMod function extracts only the required values from my object by using a
 ![](assets/readme_images/README.009.png)
 
 When landing on the page initially the Google Maps div displays the Top 5 locations on a zoomed out map of Ireland.
-When any of the Top 5 buttons are clicked/selected, that particular location is selected, displayed and zoomed in closer, 
-with its full name as the label instead of a zoomed out letter character as was seen previously.
+When any of the Top 5 buttons are clicked/selected, that particular location selected is displayed and zoomed closer, 
+with its full name as the label instead of a zoomed out capitol letter character, as was displayed initially.
 <br/><br/>
 
 ### Campsite Information <a name="campsite"></a>
@@ -152,9 +153,9 @@ each location based on the button clicked/selected.
 
 ![](assets/readme_images/README.011.png)
 
-The footer contains 3 sections, 1. A weather widget which also updates upon utilising the Top 5 buttons, 2.  A small paragraph again 
+The footer contains 3 sections, 1. A weather widget which also updates upon utilising the Top 5 buttons, 2.  A small paragraph 
 enticing visitors of the site to join the club. At the end of this paragraph is a font awesome icon (newsletter) which, if clicked/selected, will re-load the 
-modal form again to allow the visitor to subscribe. 3. Social media icons which link to their respective pages, an email link which opens the 
+modal form again to allow the visitor the second time option to subscribe. 3. Social media icons which link to their respective pages, an email link which opens the 
 visitors default email service and populates the “To” section with bookings@vwcc.com, and an external phone link shortcut for use when viewed on mobile phone devices.
 <br/><br/>
 
@@ -197,6 +198,32 @@ the project I have used Voltaire to bring the almost cartoon-like feeling associ
 spacings for responsiveness as can be seen in the style.css sheet. 
 <br/><br/>
 
+
+## User Testing <a name="testing"></a>
+
+**Website Responsiveness** <a name="testing_procedure"></a>
+
+For the functionality and responsiveness testing of this website I have utilised the following web browsers: Microsoft Edge, Mozilla Firefox and Google Chrome.
+
+To carry out testing on mobile devices I have used Google Chrome as well as Safari on my IPad and IPhone.
+
+During all stages of JavaScript method & function verification, console.log() was utilised to simulate the required results.  
+
+Please see the testing procedure table I have created for the VWCC website below:
+<br/><br/>
+
+**Call to Action Functionality Testing Procedure** <a name="testing_user_stories"></a>
+
+The table below was created to ensure no user testing steps were omitted when carrying out finished website checks. As part of my finised checks I have had a friend of mine 
+who is a senior UX designer, navigate through the site using the table created to search for errors. Initial errors were found and solved. They can be found in the bugs section.
+<br/><br/>
+
+![](assets/readme_images/usertesting.png)
+
+
+### At all stages during testing, text was evaluated for spelling, grammer and punctuation.<br/><br/>
+
+
 **HTML CSS and JavaScript Validation** <a name="validation"></a>
 
 Testing Code Validators for all sections of the website were carried out at: 
@@ -207,7 +234,7 @@ Below are screenshots of the results of my HTML page, my CSS stylesheet, and bot
 
 ### index.html
 
-![](assets/readme_images/index.png)
+![](assets/readme_images/html.png)
 
 ### style.css
 
@@ -224,18 +251,18 @@ Below are screenshots of the results of my HTML page, my CSS stylesheet, and bot
 
 ## Future "Nice to Have" Additions to The Website <a name="additions"></a>
 
-If I could make further additions to the WVCC website down the line they would be to include the following:
+If I could make further additions to the VWCC website down the line they would be to include the following:
 
  * A "Log In" and payments section for returning users. This would provide processing and storage of the visitors previous vacation information, similar to booking.com.
- Accumulated trips with the VWCC would enable them to build up a points system whereby further discounts or coupons could be passed back to the visitor.
+ Accumulated trips with the VWCC would enable them to build up a points whereby further discounts or coupons could be passed back to the visitor.
 
  * At some point down the line I would envision the Top 5 website becoming the Top 10 or the Top 20. The JavaScript code has been left in souch a way that this is possible
- by the most efficient means. This would require additional info, additional website links and additional images.
+ by the most efficient means. This would require additional info, additional website links, additional images and updating the "campsites" object.
 
- * I think a review section for each location could be a good idea and a place where visitors can provide a star rating based on their stay.
+ * I think a customer review section for each location could be a good idea and a place where visitors can provide a star rating based on their stay.
 
  * For the specific locations chosen by the 5 buttons I would like to show restaurants, attractions and other areas of interest on the Google Maps display also.
- It would involve some more research into each area and further addition to camsite object in the file script.js, but all doable in the future.
+ It would involve some more research into each area and further additions to campsite object in the file script.js, but all possible in the future.
 <br/><br/>
 
 
@@ -313,4 +340,5 @@ open with Notepad++.
 
 ## Acknowledgements <a name="acknowledgements"></a>
 
-I'd like to say a special thank you to my mentor Maranatha Ilesanmi for his excellent advice and recommendations throughout the project. 
+I'd like to say a special thank you to my mentor Maranatha Ilesanmi for his excellent advice and recommendations throughout the project.
+I have learned alot from his teachings and I hope to pick up some more from him throughout the next two projects. 
