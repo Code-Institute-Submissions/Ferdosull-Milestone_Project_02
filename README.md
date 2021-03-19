@@ -34,7 +34,7 @@
     1. [Code](#code)
     2. [Media](#media)
 9. [User Testing](#testing)
-    1. [Website Responsiveness](#testing_procedure)
+    1. [Website Responsiveness through Browser and Device Compatibility](#testing_procedure)
     2. [Call to Action Functionality Testing](#testing_user_stories)
     3. [HTML CSS and JavaScript Validation](#validation)
 10. [Future "Nice to Have" Additions to The Website](#additions)
@@ -167,23 +167,56 @@ Please see the image below of the colours picked for each icon using the followi
 ![](assets/readme_images/SOCIAL.001.png)
 <br/><br/>
 
+## Utilising the 5 Planes of UX Design <a name="ux_design"></a>
+
+**The Strategy Plane** <a name="strategy_plane"></a>
+
+The strategy plane here is concerned with attracting and inspiring Volkswagon and Campervan enthusiests to get outdoors, and go visit the Top five campsite locations that Ireland has to offer.
+I feel that this has been achieved by placing all the users requirements on a single, easy to use page, where all info about a specific location is only 1 click away.
+The site owner’s business objectives are also met by attracting people that may initially only want to holiday in a certain location but they are then introduced to four other locations and given the oppertunity
+to earn points to enjoy return vacations at a reduced rate.
+
+**The Scope Plane** <a name="scope_plane"></a>
+
+The website, I feel, incorporates modern techniques to be in line with what is current, and trys to enhance the users experience by having one button clicks carry out many tasks. 
+Once initially navigated to the website, the user is greeted by a pop-up modal form (EmailJS) which gives a new or returning user the oppertunity to subcribe to the VWCC campervan club newsletter, 
+or to enter a coupon code to redeem percentage discounts by email. When all areas have been completed successfully, and once ‘Subscribe’ has been pressed, the form carries out a reset of all entries . 
+A success message is displayed inside the modal to let the user know there request has been sent. The background, on button click, interchanging hero image, in my opinion gets the message across well 
+through campsite specific imagery. I feel the interchanging of all site specific information on the click of a button is a nice feature which provides instant results to the user. 
+It does this also by scrolling the user back to the header and info text which has now changed to suit the specific location. 
+A "More Info! button appears on mobile devices to create easy navigation to the Campsite Information Section. 
 
 **The Structure Plane** <a name="structure_plane"></a>
 
-This website is a single page layout. It has a nav-bar at the top and a footer at the bottom. 
-The nav-bar turns into a mobile friendly toggler once below a specific resolution as dictated by the bootstrap class. On the left of the nav-bar is the Volkswagon logo, the VWCC lettering, 
-a “Home” selector and an “About” selector. Links in the nav-bar will change style on hover as is standard with the bootstrap navbar class. I have styled the hover colour to be green to fit 
-in with the rest of the webpages colour scheme. Underneath the nav-bar is where the “Hero-Image” is located. Underneath the hero image is where the jumbotron header and info paragraph can be found. 
+This website is a single page layout that trys to be simplistic in its approach. It is navigated from top to bottom. It has a nav-bar at the top and a footer at the bottom. 
+The nav-bar turns into a mobile friendly toggler once below a specific resolution. Underneath the nav-bar is where the “Hero-Image” is located. 
+Underneath the hero image is where the jumbotron header and info paragraph can be found. 
 The hero image, jumbotron header and info paragraph are all updated through JavaScript once 1 of the 5 buttons are clicked/selected. Below the info paragraph is the “Visit This Site!” button. 
-This is hidden until a campsite is selected. Once a campsite is selected this same button will navigate you to the external page associated with that campsite.
-There is a “More Info” button below the “Visit This Site” button that is only displayed on mobile devices to allow for fast scroll to the campsite information section.
-The 5 buttons that carry out this function can be found in the vertical middle of the page. Underneath the 5 buttons are the Google Maps display div and the individual campsite information section. 
+This is hidden until a campsite is selected. Once a campsite is selected, this same button will navigate you to the external website associated with that campsite.
+There is a “More Info!” button below the “Visit This Site!” button that is only displayed on mobile devices to allow for fast scroll to the campsite information section.
+The 5 buttons that carry out this function can be found in the vertical middle of the page. Underneath the 5 buttons are the Google Maps display div and the individual campsite information section.
+The Google Maps div and the campsite information section are presented as two side by side columns on desktop devices and they transition to single columns when viewed on mobile devices. 
 Both the Google Maps display coordinates and campsite information sections are also updated upon one of the 5 campsite buttons being clicked/selected.
-The footer contains 3 sections, 1. A weather widget which also updates upon utilising the above five buttons, 2.  A small paragraph again urging visitors of the site to join the club. 
-At the end of this paragraph is a font awesome icon which, if clicked/selected, will re-load the modal form again to allow the visitor to subscribe. 3. Social media icons which link to their respective pages, 
-an email link which opens the visitors default email service and populates the “To” section with bookings@vwcc.com, and an external phone link for when viewed on mobile devices.
+The footer contains 3 sections, 1. An on button click updated weather widget, 2. A small paragraph, again urging visitors of the site to join the club, 3. Social media icons, email and phone links.
+The links that lead to external content like campsite webpages and social media pages will open on a new tab. The user will not lose the page that they were on before clicking the link.
 
+**The Skeleton Plane** <a name="skeleton_plane"></a>
 
+The website will have a consistently placed background hero image with six sub sections below it. The use of [colours](#colours), [fonts](#typography) and responsive elements were carefully chosen. 
+Consideration was given to make the content well placed, clear and well presented, utilising contrasting colours , right size & style fonts and adequate spacing. 
+In order to try and capture the "Holiday" theme I have used pictures from each location which I feel serve the purpose of attracting potential holidayers.
+My Balsamic [wire frames](#wire_frame) have been a great tool this time around to envision what the end result would be. It has changes slightly since initiated but over all the 
+elements functions remain the same and are more or less located in the same X, Y plane.
+
+**The Surface Plane** <a name="surface_plane"></a>
+
+The colours and imagery used on this website, I feel, are really in line with the promotion of the stay in Ireland holiday theme. I have used a mix of whites, greys, blues and greens to create this theme.
+I have used background shading and opacity shadows to highlight the jumbotron header and the hovering and clicking of items in the pop-up modal. I feel the contrasting colours and grey backgrounds 
+separate the page elements enough so that they remain individual, yet part of a combined theme. What I was trying to achieve with the webpage layout was a minimalistic appearance, yet 
+powerful JavaScript methods & functions make alot more possible when buttons are clicked, which is hidden behind this simplistic landing page layout. 
+Hovering over links, buttons and text selectors causes the elements to change colour alerting the user to the presence of their mouse pointer. 
+For the social media icons, I utilised the official brand media colours. Once the mouse pointer hovers over the icon the background colour and the foreground colours interchange. 
+<br/><br/>
 
 ## Typography <a name="typography"></a>
 
@@ -236,6 +269,13 @@ special offers and coupon codes. The end result will be additional business buil
 - As a Frequent User, I want to call or email the company directly. 
 <br/><br/>
 
+## Bugs and Bug Fixes <a name="bug_fixes"></a>
+
+During the creation of this project I encountered many bugs, mostly associated with display on mobile devices and JavaScript functions. Media Queries, further 
+styling and Google Inspect were used to eliminate the bugs encountered for display. Transitions between hero images using javascript and css proved hard to get to the end result.
+To ensure the transitions were smooth and happended when they were supposed to I used "setTimeOut" intervals between transitions and adding and removing opacity classes. 
+This was by far the hardest one to get right. For any other bug fixes that were required, console.log() was used to see the actual result as opposed to the expected result, and changes were made from there to fix.
+<br/><br/>
 
 ## References and Credits Section <a name="references_and_credits"></a>
 
@@ -327,7 +367,7 @@ Aerlingus colour scheme when finalising my colour pallete.
 
 ## User Testing <a name="testing"></a>
 
-**Website Responsiveness** <a name="testing_procedure"></a>
+**Website Responsiveness through Browser and Device Compatibility** <a name="testing_procedure"></a>
 
 For the functionality and responsiveness testing of this website I have utilised the following web browsers: Microsoft Edge, Mozilla Firefox and Google Chrome.
 
