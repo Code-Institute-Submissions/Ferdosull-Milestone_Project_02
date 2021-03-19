@@ -198,6 +198,132 @@ the project I have used Voltaire to bring the almost cartoon-like feeling associ
 spacings for responsiveness as can be seen in the style.css sheet. 
 <br/><br/>
 
+## User stories <a name="user_stories"></a>
+
+**External user’s goal:** <a name="external_user_goal"></a>
+
+The site's users are Volkswagon enthusiasts or Campervan enthusiasts who like holidaying in Irelands Top 5 outdoor locations.
+
+**Site owner's goal:** <a name="site_owner_goal"></a>
+
+The goal is to spread the word to as many campervan enthusiasts as possible that these locations are the Top 5 campsite destinations in Ireland.
+This will be achieved by presenting a pop up modal as soon as you visit the site asking you to subscribe. Once subscribed, weekly or monthly newsletters will be issued with 
+special offers and coupon codes. The end result will be additional business built up for the 5 campsites mentioned with users that will frequent all 5 locations.
+
+**First Time User Goals** <a name="first_time_user_goals"></a>
+
+- As a First Time User, I want to know what are the Top 5 campsite locations in Ireland. 
+- As a First Time User, I want to subscribe to the VWCC club and be made aware of upcoming special offers and events.
+- As a First Time User, I want to visualise using Google Maps where these exact locations are. 
+- As a First Time User, I want to see pictures of the locations when I select the location buttons.
+- As a First Time User, I want to read site specific information about rates, capacity and advanced notice periods.
+- As a First Time User, I want to know what the weather is like in that specific location.
+- As a First Time User, I want to navigate to the specific locations own website.
+
+**Returning User Goals** <a name="returning_user_goals"></a>
+
+- As a Returning User, I want to check out other campsite locations if I have just come back from a stay at one. 
+- As a Returning User, I want to enter a coupon code on the pop-up modal to redeem my special offer.
+- As a Returning User, I want to locate on Google Maps where my next holiday destination is.
+- As a Returning User, I want to know what the weather is like in that specific location for a potential upcoming stay.
+- As a Returning User, I want to check the pricing associated with each location.
+- As a Returning User, I want to call or email the company directly. 
+
+**Frequent User Goals** <a name="frequent_user_goals"></a>
+
+- As a Frequent User, I want to input coupon codes to redeem special offers.
+- As a Frequent User, I want to access the campsite specific information to see if pricing has increased or decreased during the off season.
+- As a Frequent User, I want to call or email the company directly. 
+<br/><br/>
+
+
+## References and Credits Section <a name="references_and_credits"></a>
+
+**Code:** <a name="code"></a>
+
+The code for the Modal Coupon Entry section for forcing INPUT to UPPERCASE was found at the following location:
+[:https://www.the-art-of-web.com/html/input-field-uppercase/?hilite=%7Bwords%7D ](https://www.the-art-of-web.com/html/input-field-uppercase/?hilite=%7Bwords%7D)
+
+
+Hi have utilised a weather widget from the following website link and styled it to fit in with the websites colour theme:
+[https://www.booked.net/widgets/weather](https://www.booked.net/widgets/weather)
+<br/><br/>
+
+**The following list of external stylesheets and scripts were utilised in the creation of this project:**
+
+Bootstrap Scripts and Stylesheets were utilised on this project:
+[ Bootstrap CSS ](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css) 
+[ Bootstrap Script ](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js) 
+
+Fontawesome Stylesheets were utilised on this project:
+[ Fontawesome1 ](https://use.fontawesome.com/releases/v5.6.1/css/all.css) 
+[ Fontawesome2 ]("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+Google fonts Stylesheets were utilised on this project:
+[ Google Font1 ]("https://fonts.googleapis.com/css2?family=Voltaire&display=swap") 
+[ Google Font2 ]("https://fonts.googleapis.com/css2?family=Prompt&display=swap")
+
+JavaScript and Jquery 
+[ EmailJs ]("https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js")
+[ Google Maps ]("https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js")
+[ Google API ]("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+<br/><br/>
+
+**Media** <a name="media"></a>
+
+The photos used to create the gallery were taken from the following location(s): [https://unsplash.com/ ](https://unsplash.com/)
+
+Please see list of credits below for the owner of each photo: 
+
+* bill-jelen-xb58P14hThc-unsplash – Photo by[ Bill Jelen ](https://unsplash.com/@billjelen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/space-shuttle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* brian-mcgowan-5\_Z3YVosrCw-unsplash – Photo by[ Brian McGowan ](https://unsplash.com/@sushioutlaw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* chris-boyer-S5c8MV04URs-unsplash – Photo by[ Chris Boyer ](https://unsplash.com/@csgboyer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* david-von-diemar-OIK7ce6mOW0-unsplash – Photo by[ David von Diemar ](https://unsplash.com/@davidvondiemar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* joshua-hoehne-WeSWsnVQYqU-unsplash – Photo by[ Joshua Hoehne ](https://unsplash.com/@mrthetrain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* juli-kosolapova-pZ-XFIrJMtE-unsplash – Photo by[ JuliKosolapova ](https://unsplash.com/@yuli_superson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* laurel-and-michael-evans-DsC24AEuYjc-unsplash – Photo by[ Laurel and Michael Evans ](https://unsplash.com/@laurelmike?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* margaux-olverd-5MSDShQyYSg-unsplash – Photo by[ Margaux Olverd ](https://unsplash.com/@margaux_unsplash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* nicolas-lobos-NR\_tXTuyTak-unsplash – Photo by[ Nicolas Lobos ](https://unsplash.com/@lobosnico?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/mars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* terence-burke-WV7ZMt3RjsQ-unsplash – Photo by[ Terence Burke ](https://unsplash.com/@ancientwanderer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/space-shuttle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* steffen-wienberg-ml-pxK0Ovmw-unsplash – Photo by[ steffenWienberg ](https://unsplash.com/@wnbrg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/older-male-portrait-colour-suit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* imgix-klWUhr-wPJ8-unsplash – Photo by[ imgix ](https://unsplash.com/@imgix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/computers-information-technology-coding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* science-in-hd-4pM4nhHyo9M-unsplash – Photo by[ Science in HD ](https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/advanced-medical-lab?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* roman-synkevych-fjj7lVpCxRE-unsplash – Photo by[ Roman Synkevych ](https://unsplash.com/@synkevych?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/agriculture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+* thisisengineering-raeng-Bt9HIKC0Nus-unsplash – Photo by[ ThisisEngineeringRAEng ](https://unsplash.com/@thisisengineering?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)on[ Unsplash ](https://unsplash.com/s/photos/engineering-space?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+I’d like to say thank you to the photographers who provided the content above via Unsplash free of charge.
+<br/><br/>
+
+The Logo for the nav bar is the official Volkswagon Brand logo. It was found at the following location: [www.freebiesupply.com ](https://cdn.freebiesupply.com/logos/large/2x/volkswagen-3-logo-png-transparent.png)
+<br/><br/>
+
+**Content:** <a name="contact"></a>
+
+The content for this site is based on real campsites. I have visited some of these locations myself previously. 
+The Campsite Information in relation to weekly, daily and weekend rates is purely fictional but not far off what the going rates would be. 
+
+For the info paragraphs associated with each location I have taken and augmented snippets of text from the campsites own websites.
+
+It was clear early on that the colour scheme I chose was very Irish and to strenthen that further I took inspiration from the 
+Aerlingus colour scheme when finalising my colour pallete.
+
+[ Aer Lingus ](https://www.aerlingus.com/html/en-IE/home.html?gclid=CjwKCAjw9MuCBhBUEiwAbDZ-7iZF_UKK1pK2gWBDKge3t2a7ypPL_0KGkiO0QQ4dM-VhtYMqhfWG_RoCdjwQAvD_BwE&gclsrc=aw.ds)
+<br/><br/>
+
 
 ## User Testing <a name="testing"></a>
 
@@ -207,7 +333,7 @@ For the functionality and responsiveness testing of this website I have utilised
 
 To carry out testing on mobile devices I have used Google Chrome as well as Safari on my IPad and IPhone.
 
-During all stages of JavaScript method & function verification, console.log() was utilised to simulate the required results.  
+During all stages of JavaScript method & function verification, console.log() was utilised to simulate the required outcome before implementing the end result on the page.  
 
 Please see the testing procedure table I have created for the VWCC website below:
 <br/><br/>
