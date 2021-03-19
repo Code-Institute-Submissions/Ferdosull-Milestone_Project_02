@@ -84,7 +84,9 @@ at the clients request quite efficiently.
 
 The Pop-Up modal is the first item to load from the script.js file once the main page has been loaded. The Pop-up modal is my take on utilising the form element in conjunction with EmailJs (sendMail.js).
 It is fully functioning as can be seen from the incorporated screenshots below. I have changed the "Project Request" section to be an "Enter Coupon" section for redeeming percentage-off holiday stays to change things up a bit.
-I have only used the "required" status for the name and email element form entry just incase the visitor does not have a coupon code but still wishes to subscribe to the VWCC club.
+I have only used the "required" status for the name and email element form entry just incase the visitor does not have a coupon code but still wishes to subscribe to the VWCC club. I feel this partivular element ticks the 
+box for design interactivity as it lets the user initiate and control actions, and gives feedback in the form of a success message after the email has been sent using EmailJs. Using the "required" staus in the form also ensures 
+that empty or invalid input data is handled correctly and hint text is given.
 <br/><br/>
 
 ### Nav Bar <a name="nav_bar"></a>
@@ -210,7 +212,7 @@ element's function's remain the same and are more or less located in the same X,
 **The Surface Plane** <a name="surface_plane"></a>
 
 The colours and imagery used on this website, I feel, are really in line with the promotion of the stay in Ireland holiday theme. I have used a mix of whites, greys, blues and greens to cultivate this theme. 
-The palette I chose was created at [www.coolers.co](https://coolors.co/)
+The palette I chose was created at [www.coolers.co](https://coolors.co/) <a name="colours"></a>
 
 ![](assets/readme_images/coolers.png)
 
@@ -246,30 +248,32 @@ The goal is to spread the word to as many campervan enthusiasts as possible that
 This will be achieved by presenting a pop up modal as soon as you visit the site asking you to subscribe. Once subscribed, weekly or monthly newsletters will be issued with 
 special offers and coupon codes. The end result will be additional business built up for the five campsites mentioned with users that will frequent all of these locations.
 
+![](assets/readme_images/README.012.png)
+
 **First Time User Goals** <a name="first_time_user_goals"></a>
 
-- As a First Time User, I want to know what are the Top 5 campsite locations in Ireland. 
-- As a First Time User, I want to subscribe to the VWCC club and be made aware of upcoming special offers and events.
-- As a First Time User, I want to visualise using Google Maps where these exact locations are. 
-- As a First Time User, I want to see pictures of the locations when I select the location buttons.
-- As a First Time User, I want to read site specific information about rates, capacity and advanced notice periods.
-- As a First Time User, I want to know what the weather is like in that specific location.
-- As a First Time User, I want to navigate to the specific locations own website.
+- As a First Time User, I want to know what are the Top 5 campsite locations in Ireland. [Click for Screenshot](#header_description)
+- As a First Time User, I want to subscribe to the VWCC club and be made aware of upcoming special offers and events. [Click for Screenshot](#site_owners_goal)
+- As a First Time User, I want to visualise using Google Maps where these exact locations are. [Click for Screenshot](#g_map)
+- As a First Time User, I want to see pictures of the locations when I select the location buttons. [Click for Screenshot](#hero_image)
+- As a First Time User, I want to read site specific information about rates, capacity and advanced notice periods. [Click for Screenshot](#campsite)
+- As a First Time User, I want to know what the weather is like in that specific location. [Click for Screenshot](#footer)
+- As a First Time User, I want to navigate to the specific locations own website. [Click for Screenshot](#page_links)
 
 **Returning User Goals** <a name="returning_user_goals"></a>
 
-- As a Returning User, I want to check out other campsite locations if I have just come back from a stay at one. 
-- As a Returning User, I want to enter a coupon code on the pop-up modal to redeem my special offer.
-- As a Returning User, I want to locate on Google Maps where my next holiday destination is.
-- As a Returning User, I want to know what the weather is like in that specific location for a potential upcoming stay.
-- As a Returning User, I want to check the pricing associated with each location.
-- As a Returning User, I want to call or email the company directly. 
+- As a Returning User, I want to check out other campsite locations if I have just come back from a stay at one. [Click for Screenshot](#t5_buttons)
+- As a Returning User, I want to enter a coupon code on the pop-up modal to redeem my special offer. [Click for Screenshot](#site_owners_goal)
+- As a Returning User, I want to locate on Google Maps where my next holiday destination is. [Click for Screenshot](#g_map)
+- As a Returning User, I want to know what the weather is like in that specific location for a potential upcoming stay. [Click for Screenshot](#footer)
+- As a Returning User, I want to check the pricing associated with each location. [Click for Screenshot](#campsite)
+- As a Returning User, I want to call or email the company directly. [Click for Screenshot](#footer)
 
 **Frequent User Goals** <a name="frequent_user_goals"></a>
 
-- As a Frequent User, I want to input coupon codes to redeem special offers.
-- As a Frequent User, I want to access the campsite specific information to see if pricing has decreased during the off season.
-- As a Frequent User, I want to call or email the company directly. 
+- As a Frequent User, I want to input coupon codes to redeem special offers. [Click for Screenshot](#site_owners_goal)
+- As a Frequent User, I want to access the campsite specific information to see if pricing has decreased during the off season. [Click for Screenshot](#campsite)
+- As a Frequent User, I want to call or email the company directly. [Click for Screenshot](#footer)
 <br/><br/>
 
 ## Bugs and Bug Fixes <a name="bug_fixes"></a>
@@ -304,21 +308,21 @@ Bootstrap Scripts and Stylesheets:
 
 Fontawesome Stylesheets:
 [ Fontawesome1 ](https://use.fontawesome.com/releases/v5.6.1/css/all.css) 
-[ Fontawesome2 ]("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+[ Fontawesome2 ](https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css)
 
 Google fonts Stylesheets:
-[ Google Font1 ]("https://fonts.googleapis.com/css2?family=Voltaire&display=swap") 
-[ Google Font2 ]("https://fonts.googleapis.com/css2?family=Prompt&display=swap")
+[ Google Font1 ](https://fonts.googleapis.com/css2?family=Voltaire&display=swap) 
+[ Google Font2 ](https://fonts.googleapis.com/css2?family=Prompt&display=swap)
 
 JavaScript and Jquery:
-[ EmailJs ]("https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js")
-[ Google Maps ]("https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js")
-[ Google API ]("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+[ EmailJs ](https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js)
+[ Google Maps ](https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js)
+[ Google API ](https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js)
 <br/><br/>
 
 **Media** <a name="media"></a>
 
-The photos used for the hero Images were taken from [https://unsplash.com/ ](https://unsplash.com/) and site specific photos of the locations were googled and borrowed from the individual campsites websites or social media outlets.
+The photos used for the hero Images were taken from [https://unsplash.com/ ](https://unsplash.com/) and site specific photos of the locations were googled and borrowed from the individual campsites website or social media outlet.
 
 Please see list of credits below for the owner of each photo: 
 
@@ -337,7 +341,7 @@ Please see list of credits below for the owner of each photo:
 I’d like to say thank you to the photographers who provided the content above via Unsplash, Facebook and the campsites in question for the creation of this ficticious website.
 <br/><br/>
 
-The Logo for the nav bar is the official Volkswagon Brand logo. It was found at the following location: [www.freebiesupply.com ](https://cdn.freebiesupply.com/logos/large/2x/volkswagen-3-logo-png-transparent.png)
+The Logo used in the nav bar is the official Volkswagon Brand logo. It was found at the following location: [www.freebiesupply.com ](https://cdn.freebiesupply.com/logos/large/2x/volkswagen-3-logo-png-transparent.png)
 <br/><br/>
 
 **Content:** <a name="contact"></a>
@@ -358,7 +362,9 @@ Aerlingus colour scheme when finalising and adding to my colour pallete.
 
 **Website Responsiveness through Browser and Device Compatibility** <a name="testing_procedure"></a>
 
-For the functionality and responsiveness testing of this website I have utilised the following web browsers: Microsoft Edge, Mozilla Firefox and Google Chrome.
+The interactive front-end web application was tested throughout the development, implementation and deployment stages of the project.
+
+For the continued functionality and responsiveness testing of this website I have utilised the following web browsers: Microsoft Edge, Mozilla Firefox and Google Chrome.
 
 To carry out testing on mobile devices I have used Google Chrome as well as Safari on my IPad and IPhone.
 
@@ -369,7 +375,7 @@ Please see the testing procedure table I have created for the VWCC website below
 
 **Call to Action Functionality Testing Procedure** <a name="testing_user_stories"></a>
 
-The table below was created to ensure no user testing steps were omitted when carrying out finished website checks. As part of my finised checks I have had a friend of mine 
+The table below was created to ensure no user testing steps were omitted when carrying out finished website checks. As part of my finised manual testing checks I have had a friend of mine 
 who is a senior UX designer, navigate through the site using the table created to search for errors. Initial errors that were found have been solved. They can be found in the bugs section.
 <br/><br/>
 
