@@ -253,7 +253,7 @@ special offers and coupon codes. The end result will be additional business buil
 **First Time User Goals** <a name="first_time_user_goals"></a>
 
 - As a First Time User, I want to know what are the Top 5 campsite locations in Ireland. [Click for Screenshot](#header_description)
-- As a First Time User, I want to subscribe to the VWCC club and be made aware of upcoming special offers and events. [Click for Screenshot](#site_owners_goal)
+- As a First Time User, I want to subscribe to the VWCC club and be made aware of upcoming special offers and events. [Click for Screenshot](#site_owner_goal)
 - As a First Time User, I want to visualise using Google Maps where these exact locations are. [Click for Screenshot](#g_map)
 - As a First Time User, I want to see pictures of the locations when I select the location buttons. [Click for Screenshot](#hero_image)
 - As a First Time User, I want to read site specific information about rates, capacity and advanced notice periods. [Click for Screenshot](#campsite)
@@ -263,7 +263,7 @@ special offers and coupon codes. The end result will be additional business buil
 **Returning User Goals** <a name="returning_user_goals"></a>
 
 - As a Returning User, I want to check out other campsite locations if I have just come back from a stay at one. [Click for Screenshot](#t5_buttons)
-- As a Returning User, I want to enter a coupon code on the pop-up modal to redeem my special offer. [Click for Screenshot](#site_owners_goal)
+- As a Returning User, I want to enter a coupon code on the pop-up modal to redeem my special offer. [Click for Screenshot](#site_owner_goal)
 - As a Returning User, I want to locate on Google Maps where my next holiday destination is. [Click for Screenshot](#g_map)
 - As a Returning User, I want to know what the weather is like in that specific location for a potential upcoming stay. [Click for Screenshot](#footer)
 - As a Returning User, I want to check the pricing associated with each location. [Click for Screenshot](#campsite)
@@ -271,7 +271,7 @@ special offers and coupon codes. The end result will be additional business buil
 
 **Frequent User Goals** <a name="frequent_user_goals"></a>
 
-- As a Frequent User, I want to input coupon codes to redeem special offers. [Click for Screenshot](#site_owners_goal)
+- As a Frequent User, I want to input coupon codes to redeem special offers. [Click for Screenshot](#site_owner_goal)
 - As a Frequent User, I want to access the campsite specific information to see if pricing has decreased during the off season. [Click for Screenshot](#campsite)
 - As a Frequent User, I want to call or email the company directly. [Click for Screenshot](#footer)
 <br/><br/>
